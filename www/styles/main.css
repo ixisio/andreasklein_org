@@ -1,0 +1,925 @@
+/* line 18, scss/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+/* line 27, scss/_reset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 36, scss/_reset.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 43, scss/_reset.scss */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 49, scss/_reset.scss */
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* line 54, scss/_reset.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* line 62, scss/_reset.scss */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+/* line 68, scss/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 71, scss/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 78, scss/_reset.scss */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 93, scss/_reset.scss */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+/* line 99, scss/_reset.scss */
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+/* line 104, scss/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 111, scss/_reset.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+/* line 115, scss/_reset.scss */
+input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+/* line 122, scss/_reset.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* line 125, scss/_reset.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 7, scss/_layout.scss */
+body {
+  margin: 0;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 100;
+  color: #444444;
+  background-color: white;
+}
+
+/* line 17, scss/_layout.scss */
+#container {
+  *zoom: 1;
+  max-width: 45em;
+  _width: 45em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 25, scss/_layout.scss */
+#hed {
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+}
+/* line 30, scss/_layout.scss */
+#hed #face {
+  text-align: center;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+}
+/* line 34, scss/_layout.scss */
+#hed #face img {
+  width: 100px;
+  height: 100px;
+}
+/* line 36, scss/_layout.scss */
+#hed #face:hover {
+  opacity: 0.92;
+}
+/* line 38, scss/_layout.scss */
+#hed h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+/* line 39, scss/_layout.scss */
+#hed h2.sub {
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+/* line 40, scss/_layout.scss */
+#hed .socials {
+  font-size: 16px;
+}
+/* line 42, scss/_layout.scss */
+#hed .socials a {
+  padding-right: 5px;
+}
+
+/* line 47, scss/_layout.scss */
+.type-article #hed {
+  padding-top: 2em;
+}
+
+/* line 54, scss/_layout.scss */
+#main {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.5em;
+  display: inline;
+  padding-bottom: 2em;
+}
+/* line 59, scss/_layout.scss */
+#main #hero {
+  padding-top: 1em;
+  font-weight: 100;
+}
+/* line 63, scss/_layout.scss */
+#main #hero a {
+  color: #444444;
+}
+/* line 64, scss/_layout.scss */
+#main #hero a:hover {
+  color: #63aa9c;
+}
+/* line 68, scss/_layout.scss */
+#main .posts {
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 72, scss/_layout.scss */
+#main .posts li {
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #eeeeee;
+  cursor: pointer;
+}
+/* line 79, scss/_layout.scss */
+#main .posts li:hover a {
+  color: #63aa9c;
+}
+/* line 84, scss/_layout.scss */
+#main .posts li .post-title {
+  color: #444444;
+  width: 65.93407%;
+  float: left;
+  margin-right: 2.1978%;
+  display: inline;
+}
+/* line 88, scss/_layout.scss */
+#main .posts li .post-date {
+  width: 31.86813%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.5em;
+  display: inline;
+  text-align: right;
+}
+
+/* line 99, scss/_layout.scss */
+#foot {
+  width: 100%;
+  padding-top: 5em;
+  text-align: center;
+  color: #999999;
+  font-size: 0.875em;
+}
+/* line 106, scss/_layout.scss */
+#foot a {
+  color: #999999;
+}
+/* line 107, scss/_layout.scss */
+#foot a:hover {
+  color: #e9633b;
+}
+
+@media (min-width: 48em) {
+  /* line 15, scss/_breakpoints.scss */
+  body {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  /* line 22, scss/_breakpoints.scss */
+  p {
+    margin: 0 0 13px;
+  }
+
+  /* line 26, scss/_breakpoints.scss */
+  h1 {
+    font-size: 2.25em;
+    line-height: 2.5em;
+  }
+
+  /* line 27, scss/_breakpoints.scss */
+  h2 {
+    font-size: 1.875em;
+    line-height: 2.125em;
+  }
+
+  /* line 28, scss/_breakpoints.scss */
+  h3 {
+    font-size: 1.5em;
+    line-height: 2.125em;
+  }
+
+  /* line 29, scss/_breakpoints.scss */
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.25em;
+  }
+
+  /* line 33, scss/_breakpoints.scss */
+  #main > h2, #main > h1 {
+    margin: 40px -30px 30px -30px;
+    padding: 15px 30px 15px 23px;
+    border-left: 7px solid #eee;
+  }
+
+  /* line 42, scss/_breakpoints.scss */
+  #container {
+    max-width: 57em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* line 46, scss/_breakpoints.scss */
+  #foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    text-align: left;
+    padding: 0 0 .5em 1em;
+    font-size: 0.625em;
+  }
+  /* line 55, scss/_breakpoints.scss */
+  #foot p {
+    margin: 0;
+  }
+
+  /* line 62, scss/_breakpoints.scss */
+  .type-overview #container {
+    margin-top: 5em;
+  }
+  /* line 66, scss/_breakpoints.scss */
+  .type-overview #hed {
+    margin-top: 4em;
+    padding: 0;
+    width: 31.57895%;
+    float: left;
+    margin-right: 2.63158%;
+  }
+  /* line 70, scss/_breakpoints.scss */
+  .type-overview #hed #face img {
+    width: 175px;
+    height: 175px;
+  }
+  /* line 71, scss/_breakpoints.scss */
+  .type-overview #hed h2.sub {
+    font-size: 0.6em;
+  }
+  /* line 75, scss/_breakpoints.scss */
+  .type-overview #main {
+    width: 65.78947%;
+    float: right;
+    margin-right: 0;
+  }
+
+  /* line 81, scss/_breakpoints.scss */
+  .type-article #hed {
+    text-align: left;
+    width: 48.68421%;
+    float: left;
+    margin-right: 2.63158%;
+    padding-right: 51.31579%;
+  }
+  /* line 88, scss/_breakpoints.scss */
+  .type-article #hed #face {
+    float: left;
+    padding-right: 10px;
+  }
+  /* line 91, scss/_breakpoints.scss */
+  .type-article #hed #face img {
+    width: 45px;
+    height: 45px;
+  }
+  /* line 94, scss/_breakpoints.scss */
+  .type-article #hed h1, .type-article #hed h2 {
+    float: left;
+    width: 100%;
+  }
+  /* line 97, scss/_breakpoints.scss */
+  .type-article #main {
+    width: 65.78947%;
+    float: right;
+    margin-right: 0;
+    padding-left: 17.10526%;
+    padding-right: 17.10526%;
+  }
+}
+/* line 9, scss/_type.scss */
+p {
+  margin: 0 0 13px;
+}
+
+/* line 12, scss/_type.scss */
+.lead {
+  margin-bottom: 26px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 39px;
+}
+
+/* line 23, scss/_type.scss */
+small {
+  font-size: 85%;
+}
+
+/* line 26, scss/_type.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 29, scss/_type.scss */
+em {
+  font-style: italic;
+}
+
+/* line 32, scss/_type.scss */
+cite {
+  font-style: normal;
+}
+
+/* line 35, scss/_type.scss */
+.muted {
+  color: #999999;
+}
+
+/* line 43, scss/_type.scss */
+h1, h2, h3, h4, h5, h6, h2.sub {
+  margin: 26px 0 13px 0;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1em;
+  color: #444444;
+  text-rendering: optimizelegibility;
+  text-transform: uppercase;
+}
+/* line 51, scss/_type.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, h2.sub small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+/* line 56, scss/_type.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h2.sub a {
+  color: #444444;
+}
+
+/* line 60, scss/_type.scss */
+h1 {
+  font-size: 1.875em;
+  line-height: 2em;
+}
+
+/* line 61, scss/_type.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 1.75;
+}
+
+/* line 62, scss/_type.scss */
+h3 {
+  font-size: 1.125em;
+  line-height: 1.5em;
+}
+
+/* line 63, scss/_type.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+/* line 64, scss/_type.scss */
+h5 {
+  font-size: .875em;
+  line-height: 1.25em;
+}
+
+/* line 65, scss/_type.scss */
+h6, h2.sub {
+  font-size: .75em;
+  line-height: 1.25em;
+}
+
+/* line 67, scss/_type.scss */
+h2.sub {
+  color: #999999;
+  font-weight: 100;
+}
+
+/* line 77, scss/_type.scss */
+a {
+  color: #63aa9c;
+  text-decoration: none;
+  padding-bottom: 2px;
+  font-weight: 100;
+  -webkit-transition: color 0.4s ease-in;
+  -moz-transition: color 0.4s ease-in;
+  -o-transition: color 0.4s ease-in;
+  transition: color 0.4s ease-in;
+}
+
+/* line 84, scss/_type.scss */
+a:hover {
+  color: #e9633b;
+  text-decoration: none;
+}
+
+/* line 94, scss/_type.scss */
+ul, ol {
+  padding: 0;
+  margin: 0 0 13px 25px;
+}
+
+/* line 101, scss/_type.scss */
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+/* line 104, scss/_type.scss */
+li {
+  line-height: 26px;
+}
+
+/* line 108, scss/_type.scss */
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* line 114, scss/_type.scss */
+dl {
+  margin-bottom: 26px;
+}
+
+/* line 118, scss/_type.scss */
+dt,
+dd {
+  line-height: 26px;
+}
+
+/* line 121, scss/_type.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 124, scss/_type.scss */
+dd {
+  margin-left: 13px;
+}
+
+/* line 129, scss/_type.scss */
+.dl-horizontal dt {
+  float: left;
+  width: 120px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 136, scss/_type.scss */
+.dl-horizontal dd {
+  margin-left: 130px;
+}
+
+/* line 145, scss/_type.scss */
+hr {
+  margin: 26px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid white;
+}
+
+/* line 153, scss/_type.scss */
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+/* line 157, scss/_type.scss */
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+/* line 163, scss/_type.scss */
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 26px;
+  border-left: 5px solid #eeeeee;
+}
+/* line 167, scss/_type.scss */
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32.5px;
+}
+/* line 171, scss/_type.scss */
+blockquote small {
+  display: block;
+  line-height: 26px;
+  color: #999999;
+}
+/* line 175, scss/_type.scss */
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+/* line 181, scss/_type.scss */
+blockquote.pull-right {
+  float: right;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+/* line 188, scss/_type.scss */
+blockquote.pull-right p,
+blockquote.pull-right small {
+  text-align: right;
+}
+/* line 192, scss/_type.scss */
+blockquote.pull-right small:before {
+  content: '';
+}
+/* line 195, scss/_type.scss */
+blockquote.pull-right small:after {
+  content: '\00A0 \2014';
+}
+
+/* line 206, scss/_type.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+/* line 211, scss/_type.scss */
+address {
+  display: block;
+  margin-bottom: 26px;
+  font-style: normal;
+  line-height: 26px;
+}
+
+/* line 219, scss/_type.scss */
+::-moz-selection {
+  background: #222222;
+  color: #eeeeee;
+  text-shadow: none;
+}
+
+/* line 220, scss/_type.scss */
+::selection {
+  background: #222222;
+  color: #eeeeee;
+  text-shadow: none;
+}
+
+@font-face {
+  font-family: 'icon-font';
+  src: url('/styles/fonts/icon-font.eot');
+  src: url('/styles/fonts/icon-font.woff') format("woff"), url('/styles/fonts/icon-font.eot?#iefix') format("embedded-opentype"), url('/styles/fonts/icon-font.svg#icon-font') format("svg"), url('/styles/fonts/icon-font.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, scss/_icons.scss */
+[class^="ico-"]:before, [class*=" ico-"]:before {
+  font-family: 'icon-font';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 8px;
+}
+
+/* line 21, scss/_icons.scss */
+.ico-home:before {
+  content: "\39";
+}
+
+/* line 25, scss/_icons.scss */
+.ico-logo:before {
+  content: "\38";
+}
+
+/* line 29, scss/_icons.scss */
+.ico-pencil:before {
+  content: "\27";
+}
+
+/* line 33, scss/_icons.scss */
+.ico-picture:before {
+  content: "\2a";
+}
+
+/* line 37, scss/_icons.scss */
+.ico-date:before {
+  content: "\2b";
+}
+
+/* line 41, scss/_icons.scss */
+.ico-search:before {
+  content: "\22";
+}
+
+/* line 45, scss/_icons.scss */
+.ico-screen:before {
+  content: "\23";
+}
+
+/* line 49, scss/_icons.scss */
+.ico-laptop:before {
+  content: "\24";
+}
+
+/* line 53, scss/_icons.scss */
+.ico-mobile:before {
+  content: "\25";
+}
+
+/* line 57, scss/_icons.scss */
+.ico-tablet:before {
+  content: "\26";
+}
+
+/* line 61, scss/_icons.scss */
+.ico-mobile-2:before {
+  content: "\28";
+}
+
+/* line 65, scss/_icons.scss */
+.ico-paper:before {
+  content: "\29";
+}
+
+/* line 69, scss/_icons.scss */
+.ico-copy:before {
+  content: "\2b";
+}
+
+/* line 73, scss/_icons.scss */
+.ico-coffee:before {
+  content: "\2c";
+}
+
+/* line 77, scss/_icons.scss */
+.ico-twitter:before {
+  content: "\2d";
+}
+
+/* line 81, scss/_icons.scss */
+.ico-github:before {
+  content: "\2e";
+}
+
+/* line 85, scss/_icons.scss */
+.ico-html5:before {
+  content: "\2f";
+}
+
+/* line 89, scss/_icons.scss */
+.ico-css3:before {
+  content: "\30";
+}
+
+/* line 93, scss/_icons.scss */
+.ico-facebook:before {
+  content: "\31";
+}
+
+/* line 97, scss/_icons.scss */
+.ico-apple:before {
+  content: "\32";
+}
+
+/* line 101, scss/_icons.scss */
+.ico-file-css:before {
+  content: "\33";
+}
+
+/* line 105, scss/_icons.scss */
+.ico-file-xml:before {
+  content: "\34";
+}
+
+/* line 109, scss/_icons.scss */
+.ico-mail:before {
+  content: "\35";
+}
+
+/* line 113, scss/_icons.scss */
+.ico-folder:before, .ico-tags:before {
+  content: "\36";
+}
+
+/* line 117, scss/_icons.scss */
+.ico-wordpress:before {
+  content: "\37";
+}
+
+/* line 121, scss/_icons.scss */
+.ico-share:before {
+  content: "\3a";
+}
+
+/* line 125, scss/_icons.scss */
+.ico-user:before {
+  content: "\3b";
+}
+
+/* line 129, scss/_icons.scss */
+.ico-comments:before {
+  content: "\3c";
+}
+
+/* line 133, scss/_icons.scss */
+.ico-icomoon:before {
+  content: "\21";
+}
+
+/* line 6, scss/_utilities.scss */
+.date, #main .posts li .post-date {
+  font-size: 14px;
+  color: #999999;
+  padding-left: 5px;
+}
+
+/* line 13, scss/_utilities.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 16, scss/_utilities.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 21, scss/_utilities.scss */
+.hide {
+  display: none;
+}
+
+/* line 24, scss/_utilities.scss */
+.show {
+  display: block;
+}
+
+/* line 28, scss/_utilities.scss */
+.space {
+  display: block;
+  width: 100%;
+  line-height: 26px;
+}
+
+/* line 35, scss/_utilities.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 40, scss/_utilities.scss */
+.affix {
+  position: fixed;
+}
+
+/* line 45, scss/_utilities.scss */
+.clearfix, .group, #main .posts li {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 50, scss/_utilities.scss */
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 55, scss/_utilities.scss */
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 67, scss/_utilities.scss */
+.img-circle, #hed #face img {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}

@@ -1,4 +1,3 @@
-andreasklein
-============
+# AndreasKlein.ORG v7
 
-Repo of my personal blog.
+## Frontend developers blog

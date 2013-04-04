@@ -1,0 +1,4 @@
+li(data-href=post.url)
+  a.post-title(href=post.url)
+    = post.title
+  span.post-date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}

@@ -1,0 +1,114 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #444 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #eee !default;
+$white:                 #fff !default;
+
+
+// Accent colors
+// -------------------------
+$color-green:           #63AA9C !default;
+$color-orange:          #E9633B !default;
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        $white !default;
+$textColor:             $grayDark !default;
+
+
+// Links
+// -------------------------
+$linkColor:             $color-green !default;
+$linkColorHover:        $color-orange !default;
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Open Sans", Helvetica, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$baseFontSize:          16px !default;
+$baseFontSize-desktop:  20px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$baseLineHeight:        26px !default;
+$baseLineHeight-desktop:32px !default;
+$altFontFamily:         $serifFontFamily !default;
+
+$headingsFontFamily:    inherit !default; // empty to use BS default,
+$headingsFontWeight:    400 !default;    // instead of browser default, bold
+$headingsColor:         $grayDark !default; // empty to use BS default, $textColor
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "/images/glyphicons-halflings.png" !default;
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight !default;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter !default;
+
+
+
+// GRID
+// --------------------------------------------------
+
+$total-columns          : 6;
+$column-width           : 6.25em;       //  100px (600)
+$column-width-tablet    : 8.25em;       //  132px (792)
+$column-width-desktop   : 10.75em;       //  132px (792)
+$column-width-hires     : 14.75em;       //  132px (792)
+$gutter-width           : 1.5em;        //  24px (120)
+$grid-padding           : 1.5em;        //  24px
+
+
+//  ========================================
+//  Tablet Layout & Smaller Desktops,
+//  based on a 6 Columns Grid
+//
+//  768px (48em) -->
+//
+//  ========================================
+$breakpoint-1      : 48em;
+
+//  ========================================
+//  Desktop Layout,
+//  based on a 6 Columns Grid
+//
+//  1024px (64em)    -->
+//
+//  ========================================
+
+$breakpoint-2      : 64em;
+
+//  ========================================
+//  High density Desktops Layout,
+//  based on a 12 Columns Grid
+//
+//  1280px (80em)    -->
+//
+//  ========================================
+$breakpoint-3      : 80em;
+
+
+// Default: Mobile;
+// -------------------------

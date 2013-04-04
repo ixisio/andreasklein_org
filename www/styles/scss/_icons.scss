@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'icon-font';
+  src: font-url("icon-font.eot");
+  src:  font-url("icon-font.woff") format("woff"),
+        font-url("icon-font.eot?#iefix") format("embedded-opentype"),
+        font-url("icon-font.svg#icon-font") format("svg"),
+        font-url("icon-font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="ico-"]:before, [class*=" ico-"]:before {
+  font-family: 'icon-font';
+  font-style: normal;
+  speak: none;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 8px;
+}
+
+.ico-home:before {
+  content: "\39";
+}
+
+.ico-logo:before {
+  content: "\38";
+}
+
+.ico-pencil:before {
+  content: "\27";
+}
+
+.ico-picture:before {
+  content: "\2a";
+}
+
+.ico-date:before {
+  content: "\2b";
+}
+
+.ico-search:before {
+  content: "\22";
+}
+
+.ico-screen:before {
+  content: "\23";
+}
+
+.ico-laptop:before {
+  content: "\24";
+}
+
+.ico-mobile:before {
+  content: "\25";
+}
+
+.ico-tablet:before {
+  content: "\26";
+}
+
+.ico-mobile-2:before {
+  content: "\28";
+}
+
+.ico-paper:before {
+  content: "\29";
+}
+
+.ico-copy:before {
+  content: "\2b";
+}
+
+.ico-coffee:before {
+  content: "\2c";
+}
+
+.ico-twitter:before {
+  content: "\2d";
+}
+
+.ico-github:before {
+  content: "\2e";
+}
+
+.ico-html5:before {
+  content: "\2f";
+}
+
+.ico-css3:before {
+  content: "\30";
+}
+
+.ico-facebook:before {
+  content: "\31";
+}
+
+.ico-apple:before {
+  content: "\32";
+}
+
+.ico-file-css:before {
+  content: "\33";
+}
+
+.ico-file-xml:before {
+  content: "\34";
+}
+
+.ico-mail:before {
+  content: "\35";
+}
+
+.ico-folder:before, .ico-tags:before {
+  content: "\36";
+}
+
+.ico-wordpress:before {
+  content: "\37";
+}
+
+.ico-share:before {
+  content: "\3a";
+}
+
+.ico-user:before {
+  content: "\3b";
+}
+
+.ico-comments:before {
+  content: "\3c";
+}
+
+.ico-icomoon:before {
+  content: "\21";
+}

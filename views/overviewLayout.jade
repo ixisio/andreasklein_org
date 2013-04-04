@@ -1,0 +1,33 @@
+!!! 5
+html(lang="en", class="type-overview")<!--<![endif]-->
+  head
+    title= 'Frontend developers Blog by Andreas Klein'
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name="viewport", content="width=device-width, minimum-scale=1.0,maximum-scale=1.0")
+    meta(name="description", content="I am a freelance developer, heavy Espresso drinker, JavaScript pirat, freestyle Skater & Longboarder.")
+
+    link(rel="shortcut icon", href="/favicon.ico")
+    link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300")
+    link(rel='stylesheet', href='/styles/main.css')
+  body
+    #container
+      header#hed
+        a(id="face", href="/", title="Andreas Klein")
+          img(src="https://secure.gravatar.com/avatar/0900248218c7d65450db919ec8c01109?s=220&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-220.png")
+        h1(title="Frontend developers Blog by Andreas Klein") Andreas Klein
+        h2.sub Frontend-Developer
+        p.socials
+          a.ico-twitter.icon(href="http://twitter.com/ixisio")
+          a.ico-github.icon(href="http://github.com/ixisio")
+          a.ico-mail.icon(href="mailto:mail[at]andreasklein[dot]org")
+
+      #main(role="main")
+        block content
+
+      footer(id="foot")
+        p &copy; 2013 Andreas Klein, <a href="/imprint">Imprint</a>
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src='/scripts/v7.js')

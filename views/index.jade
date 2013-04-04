@@ -1,0 +1,18 @@
+extends overviewLayout
+
+block content
+  - var posts = getPosts(0,5)
+  - var page  = 1
+  if posts.length > 1
+    h2 Posts
+    ul.posts
+      each post in posts
+        include includes/postSnippet
+  else
+    h2 Maintenance Log
+    include includes/maintenance
+
+  h2 Bio
+  include includes/bio
+
+  include includes/pagination

@@ -1,0 +1,108 @@
+@import "susy";
+
+//
+// Layouts Styles
+// --------------------------------------------------
+
+body {
+  margin: 0;
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-weight: 100;
+  color: $textColor;
+  background-color: $bodyBackground;
+}
+
+#container {
+    @include container;
+    position: relative;
+}
+
+// Master Header
+// --------------------------
+
+#hed {
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+
+  #face {
+      text-align: center;
+      opacity: 1;
+      @include transition(opacity 0.4s ease-in);
+      img { @extend .img-circle; width: 100px; height: 100px;}
+
+      &:hover { opacity: 0.92; }
+  }
+  h1 { font-size: 20px; margin-bottom: 0;}
+  h2.sub { margin-top: -8px; margin-bottom: 15px; }
+  .socials {
+    font-size: 16px;
+    a {padding-right: 5px;}
+  }
+}
+
+.type-article {
+  #hed {
+    padding-top: 2em;
+  }
+}
+
+// Main Content Area
+// --------------------------
+#main {
+    @include span-columns($total-columns omega, $total-columns);
+    padding-bottom: 2em;
+
+
+    #hero {
+        padding-top: 1em;
+        font-weight: 100;
+
+        a { color: $headingsColor;
+            &:hover { color: $linkColor; }
+        }
+    }
+
+    .posts {
+      list-style-type: none;
+      margin-left: 0;
+
+      li {
+        margin: 0 0 20px 0;
+        border-bottom: 1px solid $grayLighter;
+        cursor: pointer;
+        @extend .group;
+
+        &:hover {
+          a {
+            color: $linkColor;
+          }
+        }
+
+        .post-title {
+          color: $grayDark;
+          @include span-columns(6, 9);
+        }
+        .post-date {
+          @include span-columns(3 omega, 9);
+          @extend .date;
+          text-align: right;
+        }
+      }
+    }
+}
+
+// Master Footer
+// --------------------------
+#foot {
+    width: 100%;
+    padding-top: 5em;
+    text-align: center;
+    color: $grayLight;
+    font-size: 0.875em;
+
+    a { color: $grayLight;}
+    a:hover { color: $color-orange;}
+}
