@@ -7,10 +7,10 @@
     "url": "http://andreasklein.org"
   },
   "license": "MIT",
-  "main": "app",
+  "main": "blog",
   "repository": {
     "type": "git",
-    "url": "http://github.com/ixisio/personal-blog"
+    "url": "http://github.com/ixisio/andreasklein"
   },
   "dependencies": {
     "express": ">= 3.0.0rc5",
