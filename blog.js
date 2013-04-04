@@ -7,7 +7,7 @@ var
 // --------------------------
 var
     config = {
-      port: process.env.port || 3322
+      port: process.env.PORT || 3322
     };
 
 // Express Config
@@ -72,5 +72,5 @@ app.get('/imprint', function ( req, res ) {
 app.get( '/', function ( req, res ) { res.render( 'index' ); });
 
 
-app.listen( config.port );
-console.log('Listen on Port ' + config.port);
+app.listen( process.env.PORT || config.port );
+console.log('Listen on Port ');
