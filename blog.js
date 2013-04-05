@@ -73,4 +73,4 @@ app.get( '/', function ( req, res ) { res.render( 'index' ); });
 
 
 app.listen( process.env.PORT || config.port );
-console.log('Listen on Port ');
+console.log('Listen on Port ' + process.env.PORT || config.port);
