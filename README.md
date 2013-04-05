@@ -1,7 +1,6 @@
-## Personal Website & Blog - Version 7
+## Personal Website & Blog v7
 
-My personal blog written in pure javascript with nodejs, [express](http://expressjs.com/) & [Poet](http://jsantell.github.com/poet/)
-.
+**.. my personal blog. Written in pure JavaScript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)** 
 
 
 ### Release History
