@@ -277,49 +277,49 @@ body {
 }
 
 @media (min-width: 48em) {
-  /* line 15, scss/_breakpoints.scss */
+  /* line 17, scss/_breakpoints.scss */
   body {
     font-size: 20px;
     line-height: 32px;
   }
 
-  /* line 22, scss/_breakpoints.scss */
+  /* line 24, scss/_breakpoints.scss */
   p {
     margin: 0 0 13px;
   }
 
-  /* line 26, scss/_breakpoints.scss */
+  /* line 28, scss/_breakpoints.scss */
   h1 {
     font-size: 2.25em;
     line-height: 2.5em;
   }
 
-  /* line 27, scss/_breakpoints.scss */
+  /* line 29, scss/_breakpoints.scss */
   h2 {
     font-size: 1.875em;
     line-height: 2.125em;
   }
 
-  /* line 28, scss/_breakpoints.scss */
+  /* line 30, scss/_breakpoints.scss */
   h3 {
     font-size: 1.5em;
     line-height: 2.125em;
   }
 
-  /* line 29, scss/_breakpoints.scss */
+  /* line 31, scss/_breakpoints.scss */
   h4 {
     font-size: 1.125em;
     line-height: 1.25em;
   }
 
-  /* line 33, scss/_breakpoints.scss */
+  /* line 35, scss/_breakpoints.scss */
   #main > h2, #main > h1 {
     margin: 40px -30px 30px -30px;
     padding: 15px 30px 15px 23px;
     border-left: 7px solid #eee;
   }
 
-  /* line 42, scss/_breakpoints.scss */
+  /* line 44, scss/_breakpoints.scss */
   #container {
     max-width: 57em;
     padding-left: 1.5em;
@@ -334,7 +334,7 @@ body {
     clear: both;
   }
 
-  /* line 46, scss/_breakpoints.scss */
+  /* line 48, scss/_breakpoints.scss */
   #foot {
     position: fixed;
     bottom: 0;
@@ -344,16 +344,16 @@ body {
     padding: 0 0 .5em 1em;
     font-size: 0.625em;
   }
-  /* line 55, scss/_breakpoints.scss */
+  /* line 57, scss/_breakpoints.scss */
   #foot p {
     margin: 0;
   }
 
-  /* line 62, scss/_breakpoints.scss */
+  /* line 64, scss/_breakpoints.scss */
   .type-overview #container {
     margin-top: 5em;
   }
-  /* line 66, scss/_breakpoints.scss */
+  /* line 68, scss/_breakpoints.scss */
   .type-overview #hed {
     margin-top: 4em;
     padding: 0;
@@ -361,23 +361,23 @@ body {
     float: left;
     margin-right: 2.63158%;
   }
-  /* line 70, scss/_breakpoints.scss */
+  /* line 72, scss/_breakpoints.scss */
   .type-overview #hed #face img {
     width: 175px;
     height: 175px;
   }
-  /* line 71, scss/_breakpoints.scss */
+  /* line 73, scss/_breakpoints.scss */
   .type-overview #hed h2.sub {
     font-size: 0.6em;
   }
-  /* line 75, scss/_breakpoints.scss */
+  /* line 77, scss/_breakpoints.scss */
   .type-overview #main {
     width: 65.78947%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 81, scss/_breakpoints.scss */
+  /* line 83, scss/_breakpoints.scss */
   .type-article #hed {
     text-align: left;
     width: 48.68421%;
@@ -385,28 +385,49 @@ body {
     margin-right: 2.63158%;
     padding-right: 51.31579%;
   }
-  /* line 88, scss/_breakpoints.scss */
+  /* line 90, scss/_breakpoints.scss */
   .type-article #hed #face {
     float: left;
     padding-right: 10px;
   }
-  /* line 91, scss/_breakpoints.scss */
+  /* line 93, scss/_breakpoints.scss */
   .type-article #hed #face img {
     width: 45px;
     height: 45px;
   }
-  /* line 94, scss/_breakpoints.scss */
+  /* line 96, scss/_breakpoints.scss */
   .type-article #hed h1, .type-article #hed h2 {
     float: left;
     width: 100%;
   }
-  /* line 97, scss/_breakpoints.scss */
+  /* line 99, scss/_breakpoints.scss */
   .type-article #main {
     width: 65.78947%;
     float: right;
     margin-right: 0;
     padding-left: 17.10526%;
     padding-right: 17.10526%;
+  }
+
+  /* line 108, scss/_breakpoints.scss */
+  .text-image-block .txt {
+    width: 66.08696%;
+    float: left;
+    margin-right: 1.73913%;
+  }
+  /* line 111, scss/_breakpoints.scss */
+  .text-image-block .image {
+    width: 32.17391%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (max-width: 48em) {
+  /* line 131, scss/_breakpoints.scss */
+  #main .text-image-block .image {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 1em;
   }
 }
 /* line 9, scss/_type.scss */

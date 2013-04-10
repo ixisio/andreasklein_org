@@ -4,6 +4,8 @@
 
 @import "susy";
 
+
+// Breakpoint for Desktop/Tablet Devices > 768px
 @include at-breakpoint($breakpoint-1 $total-columns) {
     @include with-grid-settings(
             $total-columns,
@@ -99,5 +101,39 @@
             @include pad(1,1);
           }
         }
+
+        // LAYOUT HELPERS
+        // -------------------
+        .text-image-block {
+          .txt {
+            @include span-columns(6, 9);
+          }
+          .image {
+            @include span-columns(3 omega, 9);
+          }
+        }
+    }
+}
+
+// Breakpoint for only mobile Screen < 768px
+@include at-breakpoint($total-columns $breakpoint-1) {
+    @include with-grid-settings(
+            $total-columns,
+            $column-width-tablet,
+            $gutter-width,
+            $grid-padding
+    ) {
+
+      #main {
+        // LAYOUT HELPERS
+        // -------------------
+        .text-image-block {
+          .image {
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 1em;
+          }
+        }
+      }
     }
 }
