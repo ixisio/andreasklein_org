@@ -71,6 +71,11 @@ app.get('/imprint', function ( req, res ) {
 
 app.get( '/', function ( req, res ) { res.render( 'index' ); });
 
+app.use(function(req, res) {
+  res.render('4o4.jade', {
+    url: req.url
+  });
+});
 
 app.listen( process.env.PORT || config.port );
-console.log('Listen on Port ' + process.env.PORT || config.port);
+console.log('Listen on Port ' + (process.env.PORT || config.port) );

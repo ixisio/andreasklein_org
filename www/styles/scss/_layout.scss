@@ -55,16 +55,6 @@ body {
     @include span-columns($total-columns omega, $total-columns);
     padding-bottom: 2em;
 
-
-    #hero {
-        padding-top: 1em;
-        font-weight: 100;
-
-        a { color: $headingsColor;
-            &:hover { color: $linkColor; }
-        }
-    }
-
     .posts {
       list-style-type: none;
       margin-left: 0;

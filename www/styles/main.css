@@ -213,35 +213,22 @@ body {
   display: inline;
   padding-bottom: 2em;
 }
-/* line 59, scss/_layout.scss */
-#main #hero {
-  padding-top: 1em;
-  font-weight: 100;
-}
-/* line 63, scss/_layout.scss */
-#main #hero a {
-  color: #444444;
-}
-/* line 64, scss/_layout.scss */
-#main #hero a:hover {
-  color: #63aa9c;
-}
-/* line 68, scss/_layout.scss */
+/* line 58, scss/_layout.scss */
 #main .posts {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 72, scss/_layout.scss */
+/* line 62, scss/_layout.scss */
 #main .posts li {
   margin: 0 0 20px 0;
   border-bottom: 1px solid #eeeeee;
   cursor: pointer;
 }
-/* line 79, scss/_layout.scss */
+/* line 69, scss/_layout.scss */
 #main .posts li:hover a {
   color: #63aa9c;
 }
-/* line 84, scss/_layout.scss */
+/* line 74, scss/_layout.scss */
 #main .posts li .post-title {
   color: #444444;
   width: 65.93407%;
@@ -249,7 +236,7 @@ body {
   margin-right: 2.1978%;
   display: inline;
 }
-/* line 88, scss/_layout.scss */
+/* line 78, scss/_layout.scss */
 #main .posts li .post-date {
   width: 31.86813%;
   float: right;
@@ -259,7 +246,7 @@ body {
   text-align: right;
 }
 
-/* line 99, scss/_layout.scss */
+/* line 89, scss/_layout.scss */
 #foot {
   width: 100%;
   padding-top: 5em;
@@ -267,11 +254,11 @@ body {
   color: #999999;
   font-size: 0.875em;
 }
-/* line 106, scss/_layout.scss */
+/* line 96, scss/_layout.scss */
 #foot a {
   color: #999999;
 }
-/* line 107, scss/_layout.scss */
+/* line 97, scss/_layout.scss */
 #foot a:hover {
   color: #e9633b;
 }
@@ -318,8 +305,14 @@ body {
     padding: 15px 30px 15px 23px;
     border-left: 7px solid #eee;
   }
+  /* line 41, scss/_breakpoints.scss */
+  #main .hero, #main .fat {
+    margin: 0;
+    padding: 10px 0;
+    border: none;
+  }
 
-  /* line 44, scss/_breakpoints.scss */
+  /* line 50, scss/_breakpoints.scss */
   #container {
     max-width: 57em;
     padding-left: 1.5em;
@@ -334,7 +327,7 @@ body {
     clear: both;
   }
 
-  /* line 48, scss/_breakpoints.scss */
+  /* line 54, scss/_breakpoints.scss */
   #foot {
     position: fixed;
     bottom: 0;
@@ -344,16 +337,16 @@ body {
     padding: 0 0 .5em 1em;
     font-size: 0.625em;
   }
-  /* line 57, scss/_breakpoints.scss */
+  /* line 63, scss/_breakpoints.scss */
   #foot p {
     margin: 0;
   }
 
-  /* line 64, scss/_breakpoints.scss */
+  /* line 70, scss/_breakpoints.scss */
   .type-overview #container {
     margin-top: 5em;
   }
-  /* line 68, scss/_breakpoints.scss */
+  /* line 74, scss/_breakpoints.scss */
   .type-overview #hed {
     margin-top: 4em;
     padding: 0;
@@ -361,23 +354,23 @@ body {
     float: left;
     margin-right: 2.63158%;
   }
-  /* line 72, scss/_breakpoints.scss */
+  /* line 78, scss/_breakpoints.scss */
   .type-overview #hed #face img {
     width: 175px;
     height: 175px;
   }
-  /* line 73, scss/_breakpoints.scss */
+  /* line 79, scss/_breakpoints.scss */
   .type-overview #hed h2.sub {
     font-size: 0.6em;
   }
-  /* line 77, scss/_breakpoints.scss */
+  /* line 83, scss/_breakpoints.scss */
   .type-overview #main {
     width: 65.78947%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 83, scss/_breakpoints.scss */
+  /* line 89, scss/_breakpoints.scss */
   .type-article #hed {
     text-align: left;
     width: 48.68421%;
@@ -385,22 +378,22 @@ body {
     margin-right: 2.63158%;
     padding-right: 51.31579%;
   }
-  /* line 90, scss/_breakpoints.scss */
+  /* line 96, scss/_breakpoints.scss */
   .type-article #hed #face {
     float: left;
     padding-right: 10px;
   }
-  /* line 93, scss/_breakpoints.scss */
+  /* line 99, scss/_breakpoints.scss */
   .type-article #hed #face img {
     width: 45px;
     height: 45px;
   }
-  /* line 96, scss/_breakpoints.scss */
+  /* line 102, scss/_breakpoints.scss */
   .type-article #hed h1, .type-article #hed h2 {
     float: left;
     width: 100%;
   }
-  /* line 99, scss/_breakpoints.scss */
+  /* line 105, scss/_breakpoints.scss */
   .type-article #main {
     width: 65.78947%;
     float: right;
@@ -409,13 +402,13 @@ body {
     padding-right: 17.10526%;
   }
 
-  /* line 108, scss/_breakpoints.scss */
+  /* line 114, scss/_breakpoints.scss */
   .text-image-block .txt {
     width: 66.08696%;
     float: left;
     margin-right: 1.73913%;
   }
-  /* line 111, scss/_breakpoints.scss */
+  /* line 117, scss/_breakpoints.scss */
   .text-image-block .image {
     width: 32.17391%;
     float: right;
@@ -423,7 +416,7 @@ body {
   }
 }
 @media (max-width: 48em) {
-  /* line 131, scss/_breakpoints.scss */
+  /* line 137, scss/_breakpoints.scss */
   #main .text-image-block .image {
     width: 50%;
     margin: 0 auto;
@@ -526,12 +519,24 @@ h6, h2.sub {
 }
 
 /* line 67, scss/_type.scss */
+.hero {
+  font-size: 6em;
+  line-height: 1em;
+}
+
+/* line 71, scss/_type.scss */
+.fat {
+  font-size: 2.4em;
+  line-height: 1em;
+}
+
+/* line 76, scss/_type.scss */
 h2.sub {
   color: #999999;
   font-weight: 100;
 }
 
-/* line 77, scss/_type.scss */
+/* line 86, scss/_type.scss */
 a {
   color: #63aa9c;
   text-decoration: none;
@@ -543,19 +548,19 @@ a {
   transition: color 0.4s ease-in;
 }
 
-/* line 84, scss/_type.scss */
+/* line 93, scss/_type.scss */
 a:hover {
   color: #e9633b;
   text-decoration: none;
 }
 
-/* line 94, scss/_type.scss */
+/* line 103, scss/_type.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 13px 25px;
 }
 
-/* line 101, scss/_type.scss */
+/* line 110, scss/_type.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -563,40 +568,40 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 104, scss/_type.scss */
+/* line 113, scss/_type.scss */
 li {
   line-height: 26px;
 }
 
-/* line 108, scss/_type.scss */
+/* line 117, scss/_type.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 114, scss/_type.scss */
+/* line 123, scss/_type.scss */
 dl {
   margin-bottom: 26px;
 }
 
-/* line 118, scss/_type.scss */
+/* line 127, scss/_type.scss */
 dt,
 dd {
   line-height: 26px;
 }
 
-/* line 121, scss/_type.scss */
+/* line 130, scss/_type.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 124, scss/_type.scss */
+/* line 133, scss/_type.scss */
 dd {
   margin-left: 13px;
 }
 
-/* line 129, scss/_type.scss */
+/* line 138, scss/_type.scss */
 .dl-horizontal dt {
   float: left;
   width: 120px;
@@ -606,12 +611,12 @@ dd {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 136, scss/_type.scss */
+/* line 145, scss/_type.scss */
 .dl-horizontal dd {
   margin-left: 130px;
 }
 
-/* line 145, scss/_type.scss */
+/* line 154, scss/_type.scss */
 hr {
   margin: 26px 0;
   border: 0;
@@ -619,42 +624,42 @@ hr {
   border-bottom: 1px solid white;
 }
 
-/* line 153, scss/_type.scss */
+/* line 162, scss/_type.scss */
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #999999;
 }
 
-/* line 157, scss/_type.scss */
+/* line 166, scss/_type.scss */
 abbr.initialism {
   font-size: 90%;
   text-transform: uppercase;
 }
 
-/* line 163, scss/_type.scss */
+/* line 172, scss/_type.scss */
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 26px;
   border-left: 5px solid #eeeeee;
 }
-/* line 167, scss/_type.scss */
+/* line 176, scss/_type.scss */
 blockquote p {
   margin-bottom: 0;
   font-size: 16px;
   font-weight: 300;
   line-height: 32.5px;
 }
-/* line 171, scss/_type.scss */
+/* line 180, scss/_type.scss */
 blockquote small {
   display: block;
   line-height: 26px;
   color: #999999;
 }
-/* line 175, scss/_type.scss */
+/* line 184, scss/_type.scss */
 blockquote small:before {
   content: '\2014 \00A0';
 }
-/* line 181, scss/_type.scss */
+/* line 190, scss/_type.scss */
 blockquote.pull-right {
   float: right;
   padding-right: 15px;
@@ -662,21 +667,21 @@ blockquote.pull-right {
   border-right: 5px solid #eeeeee;
   border-left: 0;
 }
-/* line 188, scss/_type.scss */
+/* line 197, scss/_type.scss */
 blockquote.pull-right p,
 blockquote.pull-right small {
   text-align: right;
 }
-/* line 192, scss/_type.scss */
+/* line 201, scss/_type.scss */
 blockquote.pull-right small:before {
   content: '';
 }
-/* line 195, scss/_type.scss */
+/* line 204, scss/_type.scss */
 blockquote.pull-right small:after {
   content: '\00A0 \2014';
 }
 
-/* line 206, scss/_type.scss */
+/* line 215, scss/_type.scss */
 q:before,
 q:after,
 blockquote:before,
@@ -684,7 +689,7 @@ blockquote:after {
   content: "";
 }
 
-/* line 211, scss/_type.scss */
+/* line 220, scss/_type.scss */
 address {
   display: block;
   margin-bottom: 26px;
@@ -692,14 +697,14 @@ address {
   line-height: 26px;
 }
 
-/* line 219, scss/_type.scss */
+/* line 228, scss/_type.scss */
 ::-moz-selection {
   background: #222222;
   color: #eeeeee;
   text-shadow: none;
 }
 
-/* line 220, scss/_type.scss */
+/* line 229, scss/_type.scss */
 ::selection {
   background: #222222;
   color: #eeeeee;
