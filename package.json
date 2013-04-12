@@ -1,7 +1,7 @@
 {
-  "name": "personal-blog",
+  "name": "www-andreasklein-v7",
   "description": "Personal Website & Website - Version 7",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Andreas Klein",
     "url": "http://andreasklein.org"
@@ -10,7 +10,7 @@
   "main": "blog",
   "repository": {
     "type": "git",
-    "url": "http://github.com/ixisio/andreasklein"
+    "url": "http://github.com/ixisio/andreasklein_org"
   },
   "dependencies": {
     "express": ">= 3.0.0rc5",

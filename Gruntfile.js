@@ -40,7 +40,7 @@ module.exports = function( grunt ) {
           fontsDir: 'styles/fonts',
           javascriptsDir: 'scripts',
           force: true,
-          outputStyle: 'expanded'
+          outputStyle: 'compressed'
         }
       }
     },
@@ -90,7 +90,7 @@ module.exports = function( grunt ) {
     // --------------------------
     cssmin: {
       options: {
-        banner: '/*! stylesheets of my <%= pkg.name %> - v<%= pkg.version %> - ' +
+        banner: '/*! Stylsheets <%= pkg.name %> - v<%= pkg.version %> - ' +
           '<%= grunt.template.today("yyyy-mm-dd") %> - <%= pkg.author.url %> */'
       },
       dist: {
