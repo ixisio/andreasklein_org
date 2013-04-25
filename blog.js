@@ -1,7 +1,8 @@
 var
-  express = require('express'),
-  app     = express(),
-  poet    = require('poet')( app );
+  express   = require('express'),
+  app       = express(),
+  html2text = require( 'html-to-text'),
+  poet      = require('poet')( app );
 
 // Global Configuration
 // --------------------------
@@ -23,25 +24,34 @@ app.use( app.router );
 poet.set({
   postsPerPage : 10,
   posts        : './content/',
-  metaFormat   : 'json'
+  metaFormat   : 'json',
+  readMoreLink : function ( post ) {
+    var anchor = '<a href="'+post.url+'" title="Read more of '+post.title+'">&rsaquo; read more</a>';
+    return '<p class="readmore">' + anchor + '</p>';
+  }
 }).createPostRoute( '/articles/:post', 'post' )
   .createPageRoute( '/articles/page/:page', 'page' )
   .createTagRoute( '/tags/:tag', 'tag' );
 
 // Poet Initialization
 // ---------------------
-poet.init(function ( locals ) {
-  locals.postList.forEach(function ( post ) {
-    console.log(post.title);
-  });
-});
+poet.init();
+
+//function ( locals ) {
+//  locals.postList.forEach(function ( post ) {
+//    console.log(post.title);
+//  });
+//}
+
 
 app.get( '/articles/:article', function ( req, res ) {
   var post = req.poet.getPost( req.params.post );
   if ( post ) {
     res.render( 'post', { post: post });
   } else {
-    res.send(404);
+    res.render('4o4.jade', {
+      url: req.url
+    });
   }
 });
 
@@ -65,8 +75,24 @@ app.get( '/articles/page/:page', function ( req, res ) {
   });
 });
 
+// Static Routes
+// ----------------
 app.get('/imprint', function ( req, res ) {
-  res.render( 'page-imprint' );
+  res.render( 'page-imprint', {title: 'Imprint'} );
+});
+
+app.get('/rss', function ( req, res ) {
+  var posts = req.poet.getPosts(0, 5);
+
+  // Since the preview is automatically generated for the examples,
+  // it contains markup. Strip out the markup with the html-to-text
+  // module. Or you can specify your own specific rss description
+  // per post
+  posts.forEach(function (post) {
+    post.rssDescription = html2text.fromString(post.preview);
+  });
+
+  res.render( 'rss', { posts: posts });
 });
 
 app.get( '/', function ( req, res ) { res.render( 'index' ); });

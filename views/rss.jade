@@ -1,0 +1,16 @@
+doctype xml
+rss(version='2.0', xmlns:atom='<a href="http://www.w3.org/2005/Atom" rel="nofollow">http://www.w3.org/2005/Atom</a>')
+    channel
+        title Andreas Klein
+        link <a href="http://v7.andreasklein.org" rel="nofollow">http://v7.andreasklein.org</a>
+        atom:link(href='<a href="http://v7.andreasklein.org/rss" rel="nofollow">http://v7.andreasklein.org/rss</a>', rel='self', type='application/rss+xml')
+        description Developers talking about stuff that developers like to talk about.
+        language en-US
+        if posts.length
+            lastBuildDate= new Date(posts[0].publishedAt).toUTCString()
+        each post in posts
+            item
+                title= post.title
+                link= post.url
+                description= post.rssDescription
+                pubDate #{post.date.getDate()}.#{post.date.getMonth()+1}.#{post.date.getFullYear()}

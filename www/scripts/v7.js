@@ -9,6 +9,7 @@
   var V7 = function() {
 
       this.pseudoAnchors();
+      prettyPrint();
 
       return this;
   };

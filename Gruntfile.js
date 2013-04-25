@@ -40,7 +40,7 @@ module.exports = function( grunt ) {
           fontsDir: 'styles/fonts',
           javascriptsDir: 'scripts',
           force: true,
-          outputStyle: 'compressed'
+          outputStyle: 'expanded'
         }
       }
     },

@@ -1,13 +1,20 @@
-extends articleLayout
+extends layout
 
 block content
   div.post
     h1
       = post.title
-    span.date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+    div.meta-data
+      span.date #{post.date.getDate()}.#{post.date.getMonth()+1}.#{post.date.getFullYear()}
+      div.tags
+        - each tag in post.tags
+          a(href=tagUrl(tag))
+            span.label.label-info #{tag}
+
     div.post.content
       != post.content
-    div.tags
-      - each tag in post.tags
-        a(href=tagUrl(tag))
-          span.label.label-info #{tag}
+
+    div.comments
+      h2#comments Comments
+      p Ask me, criticize me, support me, have a constructive discussion or just share your thoughts on twitter
+        a(href="//twitter.com/intent/tweet?original_referer=#{post.url}&text=@ixisio #{post.title}&url=#{post.url}")&nbsp;@ixisio

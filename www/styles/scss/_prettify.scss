@@ -1,0 +1,21 @@
+pre {
+	color: #fffdeb;
+	background-color: #2c3033;
+	border-radius: 4px;
+	padding: 10px;
+	font-size: 0.8em;
+	line-height: 1em;
+
+	.pln{color:#fffdeb}
+	.str{color:#aaee22}
+	.kwd{color:#ff0077}
+	.com{color:#727879}
+	.typ{color:#fff}
+	.lit{color:#ffb412}
+	.pun,.opn,.clo{color:#04dbe5}
+	.tag{color:#04dbe5}
+	.atn{color:#606}
+	.atv{color:#080}
+	.dec,.var{color:red}
+	.fun{color:red}
+}

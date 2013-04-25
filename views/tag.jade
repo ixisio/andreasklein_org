@@ -1,7 +1,8 @@
-extends layout
+extends overviewLayout
 
 block content
   h3
     a(href=tagUrl(tag)) posts tagged * #{tag}
-  - each post in posts
-    include includes/postSnippet
+  ul
+    each post in posts
+      include includes/postSnippet

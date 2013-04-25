@@ -59,7 +59,7 @@ body {
       list-style-type: none;
       margin-left: 0;
 
-      li {
+      > li {
         margin: 0 0 20px 0;
         border-bottom: 1px solid $grayLighter;
         cursor: pointer;
@@ -72,13 +72,34 @@ body {
         }
 
         .post-title {
+          display: block;
           color: $grayDark;
-          @include span-columns(6, 9);
+          @extend h4;
         }
-        .post-date {
-          @include span-columns(3 omega, 9);
-          @extend .date;
-          text-align: right;
+
+        .post-meta {
+          font-size: 0.675em;
+        }
+
+
+        .tags ul {
+          display: inline;
+          margin: 0;
+        }
+
+        .tags li {
+          display: inline;
+
+          a {
+            font-weight: bold;
+            padding-left: 0.35em;
+          }
+          a:hover {
+            color: $linkColorHover;
+          }
+        }
+        .post-date, .tags .label {
+          color: $gray;
         }
       }
     }

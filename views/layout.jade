@@ -1,9 +1,6 @@
-
-- if(typeof post == "undefined")
-  p Post
-
 !!! 5
-html(lang="en", class="type-overview")
+html(lang="en", class="#{typeof post !== 'undefined' ? 'type-article' : 'type-overview'}")
+
   head
     include includes/head
   body

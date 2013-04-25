@@ -1,7 +1,7 @@
 {
   "name": "www-andreasklein-v7",
   "description": "Personal Website & Website - Version 7",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "author": {
     "name": "Andreas Klein",
     "url": "http://andreasklein.org"
@@ -16,7 +16,8 @@
     "express": ">= 3.0.0rc5",
     "underscore": "~1.4.4",
     "jade": "0.20.x",
-    "poet": "0.2.x"
+    "poet": "0.2.x",
+    "html-to-text": "0.0.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

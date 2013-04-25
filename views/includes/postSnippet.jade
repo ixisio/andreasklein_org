@@ -1,4 +1,20 @@
 li(data-href=post.url)
   a.post-title(href=post.url)
     = post.title
-  span.post-date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+  div.post-preview
+    != post.preview
+  div.post-meta
+    span.post-date
+      i written on <b>#{post.date.getDate()}.#{post.date.getMonth()+1}.#{post.date.getFullYear()} </b>
+    if(post.tags.length)
+      span.tags
+        i and filed under
+        ul
+          - var i = 0;
+          - each tag in post.tags
+            - i++;
+            li
+              a.label.label-info(href=tagUrl(tag))
+                = tag
+              if i !== post.tags.length
+                ,
