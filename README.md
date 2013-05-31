@@ -1,9 +1,39 @@
 ## Personal Website & Blog v7
 
-**.. my personal blog. Written in pure JavaScript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)** 
+**.. my personal blog. Written in pure JavaScript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)**
 
 
 ### Release History
+
+**0.9.0**
+
+* Make some _type CSS changes
+* Article Page Styling
+* Finish first Article, "HOW AND WHY I CREATE THIS BLOG".
+* Remove Maintenance Handler/Mode
+
+**0.8.0**
+
+* Add 404 Page Route & Handler
+* New Template/Layout Structure
+* Add Category & Tag Routes
+* Styling posts, tags
+
+**0.6.0**
+
+* Add RSS Route
+* Add RSS Handler
+
+**0.4.0**
+
+* Finish mobile breakpoint styling
+* Add Maintenance Screen
+* Add Google Analytics
+
+**0.2.0**
+
+* Add Heroku Procfile
+* Add Imprint Page Route & Content
 
 **0.1.0**
 
@@ -12,4 +42,4 @@
 * add poet
 * add express
 * add basic routes (pages, posts, cats, tags)
-* finish pages *home* & *imprint*
+* finish homepage
