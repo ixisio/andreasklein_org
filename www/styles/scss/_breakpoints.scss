@@ -58,10 +58,10 @@
           text-align: left;
           padding: 0 0 .5em 1em;
           font-size: 0.625em;
+          line-height: 20px;
+          @include span-columns(1 omega, $total-columns);
 
-          p {
-            margin: 0;
-          }
+          p { margin: 0; }
         }
 
         .type-overview {
@@ -88,14 +88,21 @@
           #hed {
 
             text-align: left;
-            @include span-columns(3, $total-columns);
-            @include suffix(3);
+            @include span-columns(2 omega, $total-columns);
+            @include suffix(4);
 
+            .socials {
+              margin-top: 7px;
+            }
 
             #face {
               float: left;
               padding-right: 10px;
               img { width: 45px; height: 45px; }
+            }
+            h1 { font-size: 18px; margin-top: 10px; }
+            h2.sub {
+              font-size: 0.6em;
             }
 
             h1, h2 { float: left; width: 100%; }
@@ -109,11 +116,22 @@
 
         // LAYOUT HELPERS
         // -------------------
-        .text-image-block {
-          .txt {
-            @include span-columns(6, 9);
+        .content {
+
+          figure {
+            &.pull-left {
+              margin-left: -14.47368%;
+            }
+
+            &.pull-right {
+              margin-right: -14.47368%;
+            }
           }
-          .image {
+
+        }
+        .text-image-block {
+          margin-bottom: 30px;
+          figure {
             @include span-columns(3 omega, 9);
           }
         }

@@ -1,0 +1,5 @@
+li.post-list-item(data-href=post.url)
+  a.post-title(href=post.url)
+    = post.title
+  div.post-meta
+    span.post-date #{post.date.getDate()}.#{post.date.getMonth()+1}.#{post.date.getFullYear()}

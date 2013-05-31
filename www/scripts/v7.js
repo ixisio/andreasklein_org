@@ -8,25 +8,18 @@
 
   var V7 = function() {
 
-      this.pseudoAnchors();
-      prettyPrint();
+    // Replace Mailing Address
+    $('[data-mailto]').each(function() {
+      $(this).attr('href', 'mailto:' + $(this).data('mailto'));
+    });
 
-      return this;
+    // Initialize code beautifier
+    prettyPrint();
+
+    return this;
   };
 
-  V7.prototype = {
-      constructor: V7,
-
-      pseudoAnchors: function() {
-        $('[data-href]').on('click', function() {
-          window.location.href = $(this).data('href');
-        });
-      }
-  }
-
   $(function() { new V7(); });
-
-
 
 }).call(this);
 

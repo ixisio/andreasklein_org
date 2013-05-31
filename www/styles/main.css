@@ -187,7 +187,7 @@ body {
 }
 /* line 39, scss/_layout.scss */
 #hed h2.sub {
-  margin-top: -8px;
+  margin-top: 0px;
   margin-bottom: 15px;
 }
 /* line 40, scss/_layout.scss */
@@ -197,14 +197,23 @@ body {
 /* line 42, scss/_layout.scss */
 #hed .socials a {
   padding-right: 5px;
+  color: #ccc;
+}
+/* line 43, scss/_layout.scss */
+#hed .socials a:hover {
+  color: #e9633b;
 }
 
-/* line 47, scss/_layout.scss */
+/* line 48, scss/_layout.scss */
 .type-article #hed {
   padding-top: 2em;
 }
+/* line 52, scss/_layout.scss */
+.type-article .post-meta {
+  border-top: 1px solid #eeeeee;
+}
 
-/* line 54, scss/_layout.scss */
+/* line 59, scss/_layout.scss */
 #main {
   width: 100%;
   float: right;
@@ -213,54 +222,63 @@ body {
   display: inline;
   padding-bottom: 2em;
 }
-/* line 58, scss/_layout.scss */
+/* line 63, scss/_layout.scss */
 #main .posts {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 62, scss/_layout.scss */
+/* line 67, scss/_layout.scss */
 #main .posts > li {
   margin: 0 0 20px 0;
+  padding-bottom: 10px;
   border-bottom: 1px solid #eeeeee;
-  cursor: pointer;
-}
-/* line 69, scss/_layout.scss */
-#main .posts > li:hover a {
-  color: #63aa9c;
 }
 /* line 74, scss/_layout.scss */
-#main .posts > li .post-title {
+#main .posts .readmore a {
+  text-decoration: none;
+}
+/* line 77, scss/_layout.scss */
+#main .posts .readmore a:hover {
+  text-decoration: underline;
+}
+/* line 82, scss/_layout.scss */
+#main .post-title {
   display: block;
   color: #444444;
+  text-decoration: none;
 }
-/* line 80, scss/_layout.scss */
-#main .posts > li .post-meta {
+/* line 87, scss/_layout.scss */
+#main .post-title:hover {
+  text-decoration: underline;
+}
+/* line 96, scss/_layout.scss */
+#main .post-meta {
   font-size: 0.675em;
 }
-/* line 85, scss/_layout.scss */
-#main .posts > li .tags ul {
+/* line 99, scss/_layout.scss */
+#main .post-meta .tags ul {
   display: inline;
   margin: 0;
 }
-/* line 90, scss/_layout.scss */
-#main .posts > li .tags li {
+/* line 104, scss/_layout.scss */
+#main .post-meta .tags li {
   display: inline;
 }
-/* line 93, scss/_layout.scss */
-#main .posts > li .tags li a {
+/* line 107, scss/_layout.scss */
+#main .post-meta .tags li a {
   font-weight: bold;
   padding-left: 0.35em;
 }
-/* line 97, scss/_layout.scss */
-#main .posts > li .tags li a:hover {
+/* line 111, scss/_layout.scss */
+#main .post-meta .tags li a:hover {
   color: #e9633b;
 }
-/* line 101, scss/_layout.scss */
-#main .posts > li .post-date, #main .posts > li .tags .label {
+/* line 115, scss/_layout.scss */
+#main .post-meta .post-date, #main .post-meta .tags .label {
   color: #555555;
 }
 
-/* line 110, scss/_layout.scss */
+/* line 123, scss/_layout.scss */
 #foot {
   width: 100%;
   padding-top: 5em;
@@ -268,11 +286,11 @@ body {
   color: #999999;
   font-size: 0.875em;
 }
-/* line 117, scss/_layout.scss */
+/* line 130, scss/_layout.scss */
 #foot a {
   color: #999999;
 }
-/* line 118, scss/_layout.scss */
+/* line 131, scss/_layout.scss */
 #foot a:hover {
   color: #e9633b;
 }
@@ -308,7 +326,7 @@ body {
   }
 
   /* line 31, scss/_breakpoints.scss */
-  h4, #main .posts > li .post-title {
+  h4, #main .post-preview .post-title {
     font-size: 1.125em;
     line-height: 1.25em;
   }
@@ -350,8 +368,12 @@ body {
     text-align: left;
     padding: 0 0 .5em 1em;
     font-size: 0.625em;
+    line-height: 20px;
+    width: 14.47368%;
+    float: right;
+    margin-right: 0;
   }
-  /* line 62, scss/_breakpoints.scss */
+  /* line 64, scss/_breakpoints.scss */
   #foot p {
     margin: 0;
   }
@@ -387,27 +409,40 @@ body {
   /* line 88, scss/_breakpoints.scss */
   .type-article #hed {
     text-align: left;
-    width: 48.68421%;
-    float: left;
-    margin-right: 2.63158%;
-    padding-right: 51.31579%;
+    width: 31.57895%;
+    float: right;
+    margin-right: 0;
+    padding-right: 68.42105%;
   }
-  /* line 95, scss/_breakpoints.scss */
+  /* line 94, scss/_breakpoints.scss */
+  .type-article #hed .socials {
+    margin-top: 7px;
+  }
+  /* line 98, scss/_breakpoints.scss */
   .type-article #hed #face {
     float: left;
     padding-right: 10px;
   }
-  /* line 98, scss/_breakpoints.scss */
+  /* line 101, scss/_breakpoints.scss */
   .type-article #hed #face img {
     width: 45px;
     height: 45px;
   }
-  /* line 101, scss/_breakpoints.scss */
+  /* line 103, scss/_breakpoints.scss */
+  .type-article #hed h1 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  /* line 104, scss/_breakpoints.scss */
+  .type-article #hed h2.sub {
+    font-size: 0.6em;
+  }
+  /* line 108, scss/_breakpoints.scss */
   .type-article #hed h1, .type-article #hed h2 {
     float: left;
     width: 100%;
   }
-  /* line 104, scss/_breakpoints.scss */
+  /* line 111, scss/_breakpoints.scss */
   .type-article #main {
     width: 65.78947%;
     float: right;
@@ -416,21 +451,28 @@ body {
     padding-right: 17.10526%;
   }
 
-  /* line 113, scss/_breakpoints.scss */
-  .text-image-block .txt {
-    width: 66.08696%;
-    float: left;
-    margin-right: 1.73913%;
+  /* line 122, scss/_breakpoints.scss */
+  .content figure.pull-left {
+    margin-left: -14.47368%;
   }
-  /* line 116, scss/_breakpoints.scss */
-  .text-image-block .image {
+  /* line 126, scss/_breakpoints.scss */
+  .content figure.pull-right {
+    margin-right: -14.47368%;
+  }
+
+  /* line 132, scss/_breakpoints.scss */
+  .text-image-block {
+    margin-bottom: 30px;
+  }
+  /* line 134, scss/_breakpoints.scss */
+  .text-image-block figure {
     width: 32.17391%;
     float: right;
     margin-right: 0;
   }
 }
 @media (max-width: 48em) {
-  /* line 136, scss/_breakpoints.scss */
+  /* line 154, scss/_breakpoints.scss */
   #main .text-image-block .image {
     width: 50%;
     margin: 0 auto;
@@ -476,7 +518,7 @@ cite {
 }
 
 /* line 43, scss/_type.scss */
-h1, h2, h3, h4, #main .posts > li .post-title, h5, h6, h2.sub {
+h1, h2, h3, h4, #main .post-preview .post-title, h5, h6, h2.sub {
   margin: 26px 0 13px 0;
   font-family: inherit;
   font-weight: 400;
@@ -486,36 +528,36 @@ h1, h2, h3, h4, #main .posts > li .post-title, h5, h6, h2.sub {
   text-transform: uppercase;
 }
 /* line 51, scss/_type.scss */
-h1 small, h2 small, h3 small, h4 small, #main .posts > li .post-title small, h5 small, h6 small, h2.sub small {
+h1 small, h2 small, h3 small, h4 small, #main .post-preview .post-title small, h5 small, h6 small, h2.sub small {
   font-weight: normal;
   line-height: 1;
   color: #999999;
 }
 /* line 56, scss/_type.scss */
-h1 a, h2 a, h3 a, h4 a, #main .posts > li .post-title a, h5 a, h6 a, h2.sub a {
+h1 a, h2 a, h3 a, h4 a, #main .post-preview .post-title a, h5 a, h6 a, h2.sub a {
   color: #444444;
 }
 
 /* line 60, scss/_type.scss */
 h1 {
   font-size: 1.875em;
-  line-height: 2em;
+  line-height: 1.275em;
 }
 
 /* line 61, scss/_type.scss */
 h2 {
   font-size: 1.5em;
-  line-height: 1.75;
+  line-height: 1.2em;
 }
 
 /* line 62, scss/_type.scss */
 h3 {
   font-size: 1.125em;
-  line-height: 1.5em;
+  line-height: 1.1em;
 }
 
 /* line 63, scss/_type.scss */
-h4, #main .posts > li .post-title {
+h4, #main .post-preview .post-title {
   font-size: 1em;
   line-height: 1.25em;
 }
@@ -544,37 +586,54 @@ h6, h2.sub {
   line-height: 1em;
 }
 
-/* line 76, scss/_type.scss */
+/* line 75, scss/_type.scss */
 h2.sub {
   color: #999999;
   font-weight: 100;
 }
 
-/* line 86, scss/_type.scss */
+/* line 80, scss/_type.scss */
+.content h2, .content h3 {
+  margin-top: 50px;
+}
+
+/* line 83, scss/_type.scss */
+.content h2 + h3 {
+  margin-top: 26px;
+}
+
+/* line 90, scss/_type.scss */
 a {
-  color: #63aa9c;
-  text-decoration: none;
-  padding-bottom: 2px;
+  color: inherit;
+  text-decoration: underline;
   font-weight: 100;
-  -webkit-transition: color 0.4s ease-in;
-  -moz-transition: color 0.4s ease-in;
-  -o-transition: color 0.4s ease-in;
-  transition: color 0.4s ease-in;
 }
 
-/* line 93, scss/_type.scss */
+/* line 95, scss/_type.scss */
 a:hover {
-  color: #e9633b;
   text-decoration: none;
 }
 
-/* line 103, scss/_type.scss */
+/* line 98, scss/_type.scss */
+a.icon {
+  text-decoration: none;
+  -webkit-transition: color 220ms ease-in;
+  -moz-transition: color 220ms ease-in;
+  -o-transition: color 220ms ease-in;
+  transition: color 220ms ease-in;
+}
+/* line 102, scss/_type.scss */
+a.icon:hover {
+  color: #e9633b;
+}
+
+/* line 112, scss/_type.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 13px 25px;
 }
 
-/* line 110, scss/_type.scss */
+/* line 119, scss/_type.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -582,40 +641,40 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 113, scss/_type.scss */
+/* line 122, scss/_type.scss */
 li {
   line-height: 26px;
 }
 
-/* line 117, scss/_type.scss */
+/* line 126, scss/_type.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 123, scss/_type.scss */
+/* line 132, scss/_type.scss */
 dl {
   margin-bottom: 26px;
 }
 
-/* line 127, scss/_type.scss */
+/* line 136, scss/_type.scss */
 dt,
 dd {
   line-height: 26px;
 }
 
-/* line 130, scss/_type.scss */
+/* line 139, scss/_type.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 133, scss/_type.scss */
+/* line 142, scss/_type.scss */
 dd {
   margin-left: 13px;
 }
 
-/* line 138, scss/_type.scss */
+/* line 147, scss/_type.scss */
 .dl-horizontal dt {
   float: left;
   width: 120px;
@@ -625,12 +684,12 @@ dd {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 145, scss/_type.scss */
+/* line 154, scss/_type.scss */
 .dl-horizontal dd {
   margin-left: 130px;
 }
 
-/* line 154, scss/_type.scss */
+/* line 163, scss/_type.scss */
 hr {
   margin: 26px 0;
   border: 0;
@@ -638,42 +697,51 @@ hr {
   border-bottom: 1px solid white;
 }
 
-/* line 162, scss/_type.scss */
+/* line 171, scss/_type.scss */
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #999999;
 }
 
-/* line 166, scss/_type.scss */
+/* line 175, scss/_type.scss */
 abbr.initialism {
   font-size: 90%;
   text-transform: uppercase;
 }
 
-/* line 172, scss/_type.scss */
+/* line 181, scss/_type.scss */
 blockquote {
   padding: 0 0 0 15px;
-  margin: 0 0 26px;
+  margin: 30px 0;
   border-left: 5px solid #eeeeee;
 }
-/* line 176, scss/_type.scss */
+/* line 185, scss/_type.scss */
 blockquote p {
+  opacity: 0.6;
   margin-bottom: 0;
+  -webkit-transition: opacity 440ms ease-in-out;
+  -moz-transition: opacity 440ms ease-in-out;
+  -o-transition: opacity 440ms ease-in-out;
+  transition: opacity 440ms ease-in-out;
   font-size: 16px;
   font-weight: 300;
-  line-height: 32.5px;
+  line-height: 26px;
 }
-/* line 180, scss/_type.scss */
+/* line 191, scss/_type.scss */
 blockquote small {
   display: block;
   line-height: 26px;
   color: #999999;
 }
-/* line 184, scss/_type.scss */
+/* line 195, scss/_type.scss */
 blockquote small:before {
   content: '\2014 \00A0';
 }
-/* line 190, scss/_type.scss */
+/* line 200, scss/_type.scss */
+blockquote:hover p {
+  opacity: 1;
+}
+/* line 205, scss/_type.scss */
 blockquote.pull-right {
   float: right;
   padding-right: 15px;
@@ -681,21 +749,21 @@ blockquote.pull-right {
   border-right: 5px solid #eeeeee;
   border-left: 0;
 }
-/* line 197, scss/_type.scss */
+/* line 212, scss/_type.scss */
 blockquote.pull-right p,
 blockquote.pull-right small {
   text-align: right;
 }
-/* line 201, scss/_type.scss */
+/* line 216, scss/_type.scss */
 blockquote.pull-right small:before {
   content: '';
 }
-/* line 204, scss/_type.scss */
+/* line 219, scss/_type.scss */
 blockquote.pull-right small:after {
   content: '\00A0 \2014';
 }
 
-/* line 215, scss/_type.scss */
+/* line 230, scss/_type.scss */
 q:before,
 q:after,
 blockquote:before,
@@ -703,7 +771,7 @@ blockquote:after {
   content: "";
 }
 
-/* line 220, scss/_type.scss */
+/* line 235, scss/_type.scss */
 address {
   display: block;
   margin-bottom: 26px;
@@ -711,14 +779,14 @@ address {
   line-height: 26px;
 }
 
-/* line 228, scss/_type.scss */
+/* line 243, scss/_type.scss */
 ::-moz-selection {
   background: #222222;
   color: #eeeeee;
   text-shadow: none;
 }
 
-/* line 229, scss/_type.scss */
+/* line 244, scss/_type.scss */
 ::selection {
   background: #222222;
   color: #eeeeee;
@@ -740,150 +808,149 @@ address {
   speak: none;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
-  margin-right: 8px;
 }
 
-/* line 21, scss/_icons.scss */
+/* line 20, scss/_icons.scss */
 .ico-home:before {
   content: "\39";
 }
 
-/* line 25, scss/_icons.scss */
+/* line 24, scss/_icons.scss */
 .ico-logo:before {
   content: "\38";
 }
 
-/* line 29, scss/_icons.scss */
+/* line 28, scss/_icons.scss */
 .ico-pencil:before {
   content: "\27";
 }
 
-/* line 33, scss/_icons.scss */
+/* line 32, scss/_icons.scss */
 .ico-picture:before {
   content: "\2a";
 }
 
-/* line 37, scss/_icons.scss */
+/* line 36, scss/_icons.scss */
 .ico-date:before {
   content: "\2b";
 }
 
-/* line 41, scss/_icons.scss */
+/* line 40, scss/_icons.scss */
 .ico-search:before {
   content: "\22";
 }
 
-/* line 45, scss/_icons.scss */
+/* line 44, scss/_icons.scss */
 .ico-screen:before {
   content: "\23";
 }
 
-/* line 49, scss/_icons.scss */
+/* line 48, scss/_icons.scss */
 .ico-laptop:before {
   content: "\24";
 }
 
-/* line 53, scss/_icons.scss */
+/* line 52, scss/_icons.scss */
 .ico-mobile:before {
   content: "\25";
 }
 
-/* line 57, scss/_icons.scss */
+/* line 56, scss/_icons.scss */
 .ico-tablet:before {
   content: "\26";
 }
 
-/* line 61, scss/_icons.scss */
+/* line 60, scss/_icons.scss */
 .ico-mobile-2:before {
   content: "\28";
 }
 
-/* line 65, scss/_icons.scss */
+/* line 64, scss/_icons.scss */
 .ico-paper:before {
   content: "\29";
 }
 
-/* line 69, scss/_icons.scss */
+/* line 68, scss/_icons.scss */
 .ico-copy:before {
   content: "\2b";
 }
 
-/* line 73, scss/_icons.scss */
+/* line 72, scss/_icons.scss */
 .ico-coffee:before {
   content: "\2c";
 }
 
-/* line 77, scss/_icons.scss */
+/* line 76, scss/_icons.scss */
 .ico-twitter:before {
   content: "\2d";
 }
 
-/* line 81, scss/_icons.scss */
+/* line 80, scss/_icons.scss */
 .ico-github:before {
   content: "\2e";
 }
 
-/* line 85, scss/_icons.scss */
+/* line 84, scss/_icons.scss */
 .ico-html5:before {
   content: "\2f";
 }
 
-/* line 89, scss/_icons.scss */
+/* line 88, scss/_icons.scss */
 .ico-css3:before {
   content: "\30";
 }
 
-/* line 93, scss/_icons.scss */
+/* line 92, scss/_icons.scss */
 .ico-facebook:before {
   content: "\31";
 }
 
-/* line 97, scss/_icons.scss */
+/* line 96, scss/_icons.scss */
 .ico-apple:before {
   content: "\32";
 }
 
-/* line 101, scss/_icons.scss */
+/* line 100, scss/_icons.scss */
 .ico-file-css:before {
   content: "\33";
 }
 
-/* line 105, scss/_icons.scss */
+/* line 104, scss/_icons.scss */
 .ico-file-xml:before {
   content: "\34";
 }
 
-/* line 109, scss/_icons.scss */
+/* line 108, scss/_icons.scss */
 .ico-mail:before {
   content: "\35";
 }
 
-/* line 113, scss/_icons.scss */
+/* line 112, scss/_icons.scss */
 .ico-folder:before, .ico-tags:before {
   content: "\36";
 }
 
-/* line 117, scss/_icons.scss */
+/* line 116, scss/_icons.scss */
 .ico-wordpress:before {
   content: "\37";
 }
 
-/* line 121, scss/_icons.scss */
+/* line 120, scss/_icons.scss */
 .ico-share:before {
   content: "\3a";
 }
 
-/* line 125, scss/_icons.scss */
+/* line 124, scss/_icons.scss */
 .ico-user:before {
   content: "\3b";
 }
 
-/* line 129, scss/_icons.scss */
+/* line 128, scss/_icons.scss */
 .ico-comments:before {
   content: "\3c";
 }
 
-/* line 133, scss/_icons.scss */
+/* line 132, scss/_icons.scss */
 .ico-icomoon:before {
   content: "\21";
 }

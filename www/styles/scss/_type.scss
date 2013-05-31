@@ -57,9 +57,9 @@ h1, h2, h3, h4, h5, h6 {
     color: $headingsColor;
   }
 }
-h1 { font-size: 1.875em; line-height: 2em; }
-h2 { font-size: 1.5em; line-height: 1.75; }
-h3 { font-size: 1.125em; line-height: 1.5em; }
+h1 { font-size: 1.875em; line-height: 1.275em; }
+h2 { font-size: 1.5em; line-height: 1.2em; }
+h3 { font-size: 1.125em; line-height: 1.1em; }
 h4 { font-size: 1em; line-height: 1.25em }
 h5 { font-size: .875em; line-height: 1.25em; }
 h6 { font-size: .75em; line-height: 1.25em; }
@@ -72,27 +72,36 @@ h6 { font-size: .75em; line-height: 1.25em; }
   font-size: 2.4em;
   line-height: 1em;
 }
-
 h2.sub {
   color: $grayLight;
   font-weight: 100;
   @extend h6;
 }
-
+.content h2, .content h3 {
+  margin-top: 50px;
+}
+.content h2 + h3 {
+  margin-top: $baseLineHeight;
+}
 
 // Links
 // -------------------------
 
 a {
-  color: $linkColor;
-  text-decoration: none;
-  padding-bottom: 2px;
+  color: inherit;
+  text-decoration: underline;
   font-weight: 100;
-  @include transition(color 0.4s ease-in);
 }
 a:hover {
-  color: $linkColorHover;
   text-decoration: none;
+}
+a.icon {
+  text-decoration: none;
+  @include transition(color 220ms ease-in);
+
+  &:hover {
+    color: $linkColorHover;
+  }
 }
 
 
@@ -171,11 +180,13 @@ abbr.initialism {
 // Blockquotes
 blockquote {
   padding: 0 0 0 15px;
-  margin: 0 0 $baseLineHeight;
+  margin: 30px 0;
   border-left: 5px solid $grayLighter;
   p {
+    opacity: 0.6;
     margin-bottom: 0;
-    @include font-shorthand(16px,300,$baseLineHeight * 1.25);
+    @include transition(opacity 440ms ease-in-out);
+    @include font-shorthand(16px, 300 , $baseLineHeight);
   }
   small {
     display: block;
@@ -185,6 +196,10 @@ blockquote {
       content: '\2014 \00A0';
     }
   }
+
+  &:hover p {
+    opacity: 1;
+  };
 
   // Float right with text-align: right
   &.pull-right {

@@ -1,8 +1,8 @@
-extends overviewLayout
+extends layout
 
 block content
-  h3
-    a(href=tagUrl(tag)) posts tagged * #{tag}
+  h3 posts tagged with:
+    a(href=tagUrl(tag))<b> #{tag}</b>
   ul
     each post in posts
-      include includes/postSnippet
+      include includes/postListItem

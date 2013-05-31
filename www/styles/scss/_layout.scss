@@ -36,16 +36,21 @@ body {
       &:hover { opacity: 0.92; }
   }
   h1 { font-size: 20px; margin-bottom: 0;}
-  h2.sub { margin-top: -8px; margin-bottom: 15px; }
+  h2.sub { margin-top: 0px; margin-bottom: 15px; }
   .socials {
     font-size: 16px;
-    a {padding-right: 5px;}
+    a {padding-right: 5px; color: #ccc;}
+    a:hover {color: $linkColorHover;}
   }
 }
 
 .type-article {
   #hed {
     padding-top: 2em;
+  }
+
+  .post-meta {
+    border-top: 1px solid $grayLighter;
   }
 }
 
@@ -61,46 +66,54 @@ body {
 
       > li {
         margin: 0 0 20px 0;
+        padding-bottom: 10px;
         border-bottom: 1px solid $grayLighter;
-        cursor: pointer;
         @extend .group;
+      }
+
+      .readmore a {
+        text-decoration: none;
+
+        &:hover {text-decoration: underline; }
+      }
+    }
+
+    // Posts Style
+    .post-title {
+        display: block;
+        color: $grayDark;
+        text-decoration: none;
 
         &:hover {
-          a {
-            color: $linkColor;
-          }
+          text-decoration: underline;
         }
+    }
+    .post-preview {
+      .post-title {
+        @extend h4;
+      }
+    }
+    .post-meta {
+      font-size: 0.675em;
 
-        .post-title {
-          display: block;
-          color: $grayDark;
-          @extend h4;
+      .tags ul {
+        display: inline;
+        margin: 0;
+      }
+
+      .tags li {
+        display: inline;
+
+        a {
+          font-weight: bold;
+          padding-left: 0.35em;
         }
-
-        .post-meta {
-          font-size: 0.675em;
+        a:hover {
+          color: $linkColorHover;
         }
-
-
-        .tags ul {
-          display: inline;
-          margin: 0;
-        }
-
-        .tags li {
-          display: inline;
-
-          a {
-            font-weight: bold;
-            padding-left: 0.35em;
-          }
-          a:hover {
-            color: $linkColorHover;
-          }
-        }
-        .post-date, .tags .label {
-          color: $gray;
-        }
+      }
+      .post-date, .tags .label {
+        color: $gray;
       }
     }
 }
