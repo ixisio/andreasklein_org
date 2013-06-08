@@ -2,13 +2,14 @@
     "title"    : "JavaScript Selector Performance",
     "tags"     : ["javascript", "performance"],
     "category" : "",
-    "date"     : "06-01-2013"
+    "date"     : "06-01-2013",
+    "draft": true
 }}}
 
 Last week, we had a discussion in our agency about JavaScript selector usage *best practises* and their impact on performance and scalability.
 In this article I will talk about these *best practises* and prove these by means of selected tests.
 
-## JavaScripts native DOMElement Selector methods 
+## JavaScripts native DOMElement Selector methods
 
 * getElementsByClassName()
 * getElementsByTagName()
@@ -41,4 +42,4 @@ Fazit: Use ```context.find(selector)``` wherever you can. It's twice as fast as 
 
 ## Selector Caching & Chaining
 
- 
+
