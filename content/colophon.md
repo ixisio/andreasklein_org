@@ -40,7 +40,7 @@ Yeah, this logging entry is very self-explaning. I did some research finding oth
 		<img src="/gfx/poet.png">
 	</figure>
 
-Node.js is a very new and interesting serverside javascript environment. The non-blocking I/O event handling makes it very powerful and scalable, also it's pleasant to write javascript at both backend and frontend. I like the concept of writing my articles in clean markdown, store it on github and parse via Node.js. The simple blogging system [Poet](http://jsantell.github.com/poet/) fulfils all of this requirements.
+Node.js is a very new and interesting serverside javascript environment. The non-blocking I/O event handling makes it very powerful and scalable, also it's pleasant to write javascript at both backend and frontend. I like the concept of writing my articles in clean markdown, store it on github and parse via Node.js. The simple blogging system Poet fulfils all of this requirements.
 </div>
 
 - It's well [documentated](http://jsantell.github.io/poet/).
@@ -58,7 +58,7 @@ First, you never crush website elements into a smaller layout.
 Second, all website elements are visible in each breakpoint, no sucking *hide-on-mobile* development.
 You can give a fuck on IE (non media query supported browsers), they displayed in mobile styles.
 
--If the mobile view (smallest) should be our starting point, you and your customer have to make a selection of the main features of the website/application. There is much less space on mobile devices than on a desktop screen, so all these unnecessary features the user never need, kicked out of the concept. Scaling website/application elements from small to larger screens is much simpler than in the other direction. If you scale down your website elements, you've initial created on a desktop screen, to fit into a mobile screen, it feels like a ..-
+<s>If the mobile view (smallest) should be our starting point, you and your customer have to make a selection of the main features of the website/application. There is much less space on mobile devices than on a desktop screen, so all these unnecessary features the user never need, kicked out of the concept. Scaling website/application elements from small to larger screens is much simpler than in the other direction. If you scale down your website elements, you've initial created on a desktop screen, to fit into a mobile screen, it feels like a ..</s>
 
 It is important to understand that we don't create a *mobile* website - We create a website optimised for a mobile device screen. A user with a mobile device has the same objectives to visit our website like a user on stationary PC but in another context - so dam, show them the same website and not less.
 
