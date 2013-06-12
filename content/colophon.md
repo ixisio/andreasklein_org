@@ -10,7 +10,6 @@ A personal blog, why? The primary reason to write a personal blog, are all this 
 <!--more-->
 
 All these *things* as mentioned before let my head explode if they can not come out, so lets kick them out - here they are!
-chrom
 
 I've written down each step of creating this simple webpage. Including all of my decisions, the current progress & other interesting findings I noticed on the way to how it looks now.
 
