@@ -1,18 +1,16 @@
 {{{
-    "title"    : "Some Ideas on how to win the Fight against the multi -context/-device armee",
+    "title"    : "Win the Fight against the multi -context/-device Armee",
     "tags"     : [],
     "category" : "notes",
     "date"     : "09-26-2013"
 }}}
 
-Here a few notes to the new reality of the multi -device/-context web. 
+Here a few notes to the new reality of the multi -device/-context web. The Browser should take care, on how to displaying a website optimized for the current device it is operating on. Right?
 
 <!--more-->
 
-The Browser should take care, on how to displaying a website optimized for the current device it is operating on.<br>
-
-Client-Server interface needs to have better and faster communication. "Hey Server, my current viewport width is about 320px. Would be great to get some suitable images. Stay tuned, your Client". 
-Reduce a website to a fluid layout, colors & font and THE CONTENT. The browser handles all of the rest. 
+Client-Server interface needs to have better and faster communication. "Hey Server, my current viewport width is about 320px. Would be great to get some suitable images. Stay tuned, your Client".
+Reduce a website to a fluid layout, colors & font and THE CONTENT. The browser handles all of the rest.
 
 ---
 
@@ -39,7 +37,7 @@ Why we should take care of the preperation of 5000 different image resources of 
 
 I wrote down these ideas, after a night of horror :-]
 Struggling around with desktop-first css overwrites (OMG), finding a working polyfill for responsive-images which has the fewest disadvantages (No way!) AND get a bandwidth-detection polyfill runnning and respond to the previously collected information (hmmm, failed!)
-Okay! Seems as if we are not ready for this new web!? If I say *we*, I mean the browser vendors, which give us the ability to create the web. 
+Okay! Seems as if we are not ready for this new web!? If I say *we*, I mean the browser vendors, which give us the ability to create the web.
 
 > I wrote down these ideas, after a night of horror :-] [@me](http://twitter.com/ixisio)
 
@@ -47,4 +45,4 @@ So guys, please be lenient with me!
 
 
 
-        
+
