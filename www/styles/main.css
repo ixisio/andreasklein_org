@@ -525,7 +525,6 @@ h1, h2, h3, h4, #main .post-preview .post-title, h5, h6, h2.sub {
   line-height: 1em;
   color: #444444;
   text-rendering: optimizelegibility;
-  text-transform: uppercase;
 }
 /* line 51, scss/_type.scss */
 h1 small, h2 small, h3 small, h4 small, #main .post-preview .post-title small, h5 small, h6 small, h2.sub small {
