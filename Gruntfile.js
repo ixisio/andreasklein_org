@@ -1,16 +1,29 @@
-var
-    path = require('path'),
-    lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+/*!
+ * andreasklein(dot)org Gruntfile
+ * http://andreasklein.org
+ * @author Andreas Klein (ixisio)
+ */
 
-var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-};
+// Livereload and connect variables
+// --------------------------
+var LIVERELOAD_PORT = 35729,
+    DEV_SERVER_PORT = 3322,
+    lrSnippet = require('connect-livereload')({
+      port: LIVERELOAD_PORT
+    }),
+    mountFolder = function (connect, dir) {
+      return connect.static(require('path').resolve(dir));
+    };
+
 
 module.exports = function( grunt ) {
   'use strict';
 
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
 
     // Project Configuration
     // --------------------------
@@ -45,45 +58,47 @@ module.exports = function( grunt ) {
       }
     },
 
-    // Server/Watch Configuration
+    // Server/Watch/Connect-Livereload Configuration
     // --------------------------
     watch: {
-      gruntfile: {
-        files: 'Gruntfile.js',
-        tasks: ['jshint:gruntfile'],
-        options: {
-          nocase: true
-        }
-      },
       src: {
         files: ['www/**/*.js', 'www/**/*.scss', '!www/scripts/vendor/*.js'],
-        tasks: ['assets'],
-        options: {
-          nospawn: true
-        }
+        tasks: ['assets']
       },
-      test: {
-        files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test']
+      livereload: {
+        options: {
+          livereload: LIVERELOAD_PORT
+        },
+        files: [
+          'views/*.md',
+          'content/**/*.jade',
+          'www/{,*/}*.{md,png,jpg,jpeg,gif,webp,svg}'
+        ],
+        tasks: ['assets']
       }
     },
 
-    // connect: {
-    //   livereload: {
-    //     options: {
-    //       port: 3322,
-    //       middleware: function(connect, options) {
-    //         return [lrSnippet, folderMount(connect, './www')];
-    //       }
-    //     }
-    //   }
-    // },
-
-    shell: {
-      view: {
-        command: 'open http://localhost:3322'
+    connect: {
+      options: {
+        port: DEV_SERVER_PORT,
+        hostname: 'localhost'
+      },
+      livereload: {
+        options: {
+          middleware: function (connect) {
+            return [lrSnippet, mountFolder(connect, '.')];
+          }
+        }
       }
     },
+
+
+    open: {
+      server: {
+        path: 'http://localhost:<%= connect.options.port %>'
+      }
+    },
+
 
 
     // Build Configuration
@@ -110,22 +125,16 @@ module.exports = function( grunt ) {
   });
 
 
-  // Load Tasks from node_modules (npmTasks)
+  // Load Tasks from node_modules (npmTasks) dynamically
   // --------------------------
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-shell');
-  // grunt.loadNpmTasks('grunt-contrib-connect');
-  // grunt.loadNpmTasks('grunt-contrib-livereload');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('connect-livereload');
 
 
   // Register Tasks
   // (1) build: Build for Prod enviroment
   // (2) assets : Lint & build static assets like (SASS Files)
-  // (2) server
-  // (3) default
+  // (2) s (server)
+  // (3) default (run `server` task)
   // --------------------------
   grunt.registerTask('build', [
     'jshint:all',
@@ -138,19 +147,19 @@ module.exports = function( grunt ) {
     'compass'
   ]);
 
-  grunt.registerTask('server', function() {
+  grunt.registerTask('s', function() {
     // Run node as child process
     grunt.util.spawn({
       cmd: 'node',
       args: ['blog.js']
     });
 
-    grunt.task.run('jshint:all');
-    grunt.task.run('compass');
-    grunt.task.run('shell:view');
+    grunt.task.run('assets');
+    // grunt.task.run('connect:livereload');
+    grunt.task.run('open');
     grunt.task.run('watch:src');
   });
 
-  grunt.registerTask('default', ['server']);
+  grunt.registerTask('default', ['s']);
 
 };
