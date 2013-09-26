@@ -1,15 +1,20 @@
-## Personal Website & Blog v7
+## andreasklein_org
 
-**.. my personal blog. Written in pure JavaScript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)**
+**.. My personal space for article, notes & ideas on the web. Written in pure JavaScript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)**
 
 
 ### Release History
+
+**0.9.1**
+
+* Remove headings uppercase styling
+* Add matchdep for grunt
+* add grunt-contrib-open
 
 **0.9.0**
 
 * Make some _type CSS changes
 * Article Page Styling
-* Finish first Article, "HOW AND WHY I CREATE THIS BLOG".
 * Remove Maintenance Handler/Mode
 
 **0.8.0**
