@@ -58,7 +58,7 @@ Last Week, I released a early prototype of one BS component for touch-enabled de
 <script src="/demos/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"></script>
 
 ## Next Steps
-If you are interested in this project, please help me to find some cool ideas on how to realize something like this, [fork](https://github.com/ixisio/bootstrap-touch-carousel) the project on Github or just have a talk on [twitter](http://twitter.com/ixisio).
+If you are interested in this project, please help me to find some cool ideas on how to realize something like this, [fork](https://github.com/ixisio/bootstrap-touch) the project on Github or just have a talk on [twitter](http://twitter.com/ixisio).
 In the following list, you can find a few ideas, bugs and improvements I've already collected. Feel free to complete the list..
 
 <a href="https://github.com/ixisio/bootstrap-touch/issues" class="ico-paper icon" target="_blank"> Issue Tracker on Github</a>
