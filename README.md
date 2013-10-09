@@ -5,6 +5,10 @@
 
 ### Release History
 
+**0.9.2**
+
+* Remove :hover Styles for touch-enabled devices
+
 **0.9.1**
 
 * Remove headings uppercase styling

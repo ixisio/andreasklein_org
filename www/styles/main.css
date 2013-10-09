@@ -163,7 +163,27 @@ body {
   padding-top: 1em;
 }
 /* line 30, scss/_layout.scss */
-#hed #face {
+#hed h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+/* line 31, scss/_layout.scss */
+#hed h2.sub {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+/* line 32, scss/_layout.scss */
+#hed .socials {
+  font-size: 16px;
+}
+/* line 34, scss/_layout.scss */
+#hed .socials a {
+  padding-right: 15px;
+  color: #ccc;
+}
+
+/* line 41, scss/_layout.scss */
+#face {
   text-align: center;
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in;
@@ -171,49 +191,22 @@ body {
   -o-transition: opacity 0.4s ease-in;
   transition: opacity 0.4s ease-in;
 }
-/* line 34, scss/_layout.scss */
-#hed #face img {
+/* line 45, scss/_layout.scss */
+#face img {
   width: 100px;
   height: 100px;
 }
-/* line 36, scss/_layout.scss */
-#hed #face:hover {
-  opacity: 0.92;
-}
-/* line 38, scss/_layout.scss */
-#hed h1 {
-  font-size: 20px;
-  margin-bottom: 0;
-}
-/* line 39, scss/_layout.scss */
-#hed h2.sub {
-  margin-top: 0px;
-  margin-bottom: 15px;
-}
-/* line 40, scss/_layout.scss */
-#hed .socials {
-  font-size: 16px;
-}
-/* line 42, scss/_layout.scss */
-#hed .socials a {
-  padding-right: 5px;
-  color: #ccc;
-}
-/* line 43, scss/_layout.scss */
-#hed .socials a:hover {
-  color: #e9633b;
-}
 
-/* line 48, scss/_layout.scss */
+/* line 49, scss/_layout.scss */
 .type-article #hed {
   padding-top: 2em;
 }
-/* line 52, scss/_layout.scss */
+/* line 53, scss/_layout.scss */
 .type-article .post-meta {
   border-top: 1px solid #eeeeee;
 }
 
-/* line 59, scss/_layout.scss */
+/* line 60, scss/_layout.scss */
 #main {
   width: 100%;
   float: right;
@@ -222,63 +215,51 @@ body {
   display: inline;
   padding-bottom: 2em;
 }
-/* line 63, scss/_layout.scss */
+/* line 64, scss/_layout.scss */
 #main .posts {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 67, scss/_layout.scss */
+/* line 68, scss/_layout.scss */
 #main .posts > li {
   margin: 0 0 20px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 74, scss/_layout.scss */
+/* line 75, scss/_layout.scss */
 #main .posts .readmore a {
   text-decoration: none;
 }
-/* line 77, scss/_layout.scss */
-#main .posts .readmore a:hover {
-  text-decoration: underline;
-}
-/* line 82, scss/_layout.scss */
+/* line 81, scss/_layout.scss */
 #main .post-title {
   display: block;
   color: #444444;
   text-decoration: none;
 }
-/* line 87, scss/_layout.scss */
-#main .post-title:hover {
-  text-decoration: underline;
-}
-/* line 96, scss/_layout.scss */
+/* line 91, scss/_layout.scss */
 #main .post-meta {
   font-size: 0.675em;
 }
-/* line 99, scss/_layout.scss */
+/* line 94, scss/_layout.scss */
 #main .post-meta .tags ul {
   display: inline;
   margin: 0;
 }
-/* line 104, scss/_layout.scss */
+/* line 99, scss/_layout.scss */
 #main .post-meta .tags li {
   display: inline;
 }
-/* line 107, scss/_layout.scss */
+/* line 102, scss/_layout.scss */
 #main .post-meta .tags li a {
   font-weight: bold;
   padding-left: 0.35em;
 }
-/* line 111, scss/_layout.scss */
-#main .post-meta .tags li a:hover {
-  color: #e9633b;
-}
-/* line 115, scss/_layout.scss */
+/* line 107, scss/_layout.scss */
 #main .post-meta .post-date, #main .post-meta .tags .label {
   color: #555555;
 }
 
-/* line 123, scss/_layout.scss */
+/* line 115, scss/_layout.scss */
 #foot {
   width: 100%;
   padding-top: 5em;
@@ -286,13 +267,9 @@ body {
   color: #999999;
   font-size: 0.875em;
 }
-/* line 130, scss/_layout.scss */
+/* line 122, scss/_layout.scss */
 #foot a {
   color: #999999;
-}
-/* line 131, scss/_layout.scss */
-#foot a:hover {
-  color: #e9633b;
 }
 
 @media (min-width: 48em) {
@@ -479,6 +456,32 @@ body {
     margin-bottom: 1em;
   }
 }
+/* line 7, scss/_non-touch.scss */
+.non-touch a:hover {
+  text-decoration: none;
+}
+/* line 8, scss/_non-touch.scss */
+.non-touch blockquote:hover p {
+  opacity: 1;
+}
+/* line 9, scss/_non-touch.scss */
+.non-touch #face:hover {
+  opacity: 0.92;
+}
+/* line 10, scss/_non-touch.scss */
+.non-touch #hed .socials a:hover {
+  color: #e9633b;
+}
+/* line 13, scss/_non-touch.scss */
+.non-touch #main .readmore a:hover,
+.non-touch #main .post-title:hover {
+  text-decoration: underline;
+}
+/* line 18, scss/_non-touch.scss */
+.non-touch #hed .socials a {
+  padding-right: 5px;
+}
+
 /* line 9, scss/_type.scss */
 p {
   margin: 0 0 13px;
@@ -609,30 +612,17 @@ a {
 }
 
 /* line 95, scss/_type.scss */
-a:hover {
-  text-decoration: none;
-}
-
-/* line 98, scss/_type.scss */
 a.icon {
   text-decoration: none;
-  -webkit-transition: color 220ms ease-in;
-  -moz-transition: color 220ms ease-in;
-  -o-transition: color 220ms ease-in;
-  transition: color 220ms ease-in;
-}
-/* line 102, scss/_type.scss */
-a.icon:hover {
-  color: #e9633b;
 }
 
-/* line 112, scss/_type.scss */
+/* line 104, scss/_type.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 13px 25px;
 }
 
-/* line 119, scss/_type.scss */
+/* line 111, scss/_type.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -640,40 +630,40 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 122, scss/_type.scss */
+/* line 114, scss/_type.scss */
 li {
   line-height: 26px;
 }
 
-/* line 126, scss/_type.scss */
+/* line 118, scss/_type.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 132, scss/_type.scss */
+/* line 124, scss/_type.scss */
 dl {
   margin-bottom: 26px;
 }
 
-/* line 136, scss/_type.scss */
+/* line 128, scss/_type.scss */
 dt,
 dd {
   line-height: 26px;
 }
 
-/* line 139, scss/_type.scss */
+/* line 131, scss/_type.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 142, scss/_type.scss */
+/* line 134, scss/_type.scss */
 dd {
   margin-left: 13px;
 }
 
-/* line 147, scss/_type.scss */
+/* line 139, scss/_type.scss */
 .dl-horizontal dt {
   float: left;
   width: 120px;
@@ -683,12 +673,12 @@ dd {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 154, scss/_type.scss */
+/* line 146, scss/_type.scss */
 .dl-horizontal dd {
   margin-left: 130px;
 }
 
-/* line 163, scss/_type.scss */
+/* line 155, scss/_type.scss */
 hr {
   margin: 26px 0;
   border: 0;
@@ -696,25 +686,25 @@ hr {
   border-bottom: 1px solid white;
 }
 
-/* line 171, scss/_type.scss */
+/* line 163, scss/_type.scss */
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #999999;
 }
 
-/* line 175, scss/_type.scss */
+/* line 167, scss/_type.scss */
 abbr.initialism {
   font-size: 90%;
   text-transform: uppercase;
 }
 
-/* line 181, scss/_type.scss */
+/* line 173, scss/_type.scss */
 blockquote {
   padding: 0 0 0 15px;
   margin: 30px 0;
   border-left: 5px solid #eeeeee;
 }
-/* line 185, scss/_type.scss */
+/* line 177, scss/_type.scss */
 blockquote p {
   opacity: 0.6;
   margin-bottom: 0;
@@ -726,21 +716,17 @@ blockquote p {
   font-weight: 300;
   line-height: 26px;
 }
-/* line 191, scss/_type.scss */
+/* line 183, scss/_type.scss */
 blockquote small {
   display: block;
   line-height: 26px;
   color: #999999;
 }
-/* line 195, scss/_type.scss */
+/* line 187, scss/_type.scss */
 blockquote small:before {
   content: '\2014 \00A0';
 }
-/* line 200, scss/_type.scss */
-blockquote:hover p {
-  opacity: 1;
-}
-/* line 205, scss/_type.scss */
+/* line 193, scss/_type.scss */
 blockquote.pull-right {
   float: right;
   padding-right: 15px;
@@ -748,21 +734,21 @@ blockquote.pull-right {
   border-right: 5px solid #eeeeee;
   border-left: 0;
 }
-/* line 212, scss/_type.scss */
+/* line 200, scss/_type.scss */
 blockquote.pull-right p,
 blockquote.pull-right small {
   text-align: right;
 }
-/* line 216, scss/_type.scss */
+/* line 204, scss/_type.scss */
 blockquote.pull-right small:before {
   content: '';
 }
-/* line 219, scss/_type.scss */
+/* line 207, scss/_type.scss */
 blockquote.pull-right small:after {
   content: '\00A0 \2014';
 }
 
-/* line 230, scss/_type.scss */
+/* line 218, scss/_type.scss */
 q:before,
 q:after,
 blockquote:before,
@@ -770,7 +756,7 @@ blockquote:after {
   content: "";
 }
 
-/* line 235, scss/_type.scss */
+/* line 223, scss/_type.scss */
 address {
   display: block;
   margin-bottom: 26px;
@@ -778,14 +764,14 @@ address {
   line-height: 26px;
 }
 
-/* line 243, scss/_type.scss */
+/* line 231, scss/_type.scss */
 ::-moz-selection {
   background: #222222;
   color: #eeeeee;
   text-shadow: none;
 }
 
-/* line 244, scss/_type.scss */
+/* line 232, scss/_type.scss */
 ::selection {
   background: #222222;
   color: #eeeeee;
@@ -1082,7 +1068,7 @@ pre .fun {
 }
 
 /* line 67, scss/_utilities.scss */
-.img-circle, #hed #face img {
+.img-circle, #face img {
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
   border-radius: 500px;

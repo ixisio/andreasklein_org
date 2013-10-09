@@ -92,16 +92,8 @@ a {
   text-decoration: underline;
   font-weight: 100;
 }
-a:hover {
-  text-decoration: none;
-}
 a.icon {
   text-decoration: none;
-  @include transition(color 220ms ease-in);
-
-  &:hover {
-    color: $linkColorHover;
-  }
 }
 
 
@@ -196,10 +188,6 @@ blockquote {
       content: '\2014 \00A0';
     }
   }
-
-  &:hover p {
-    opacity: 1;
-  };
 
   // Float right with text-align: right
   &.pull-right {
