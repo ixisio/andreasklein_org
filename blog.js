@@ -37,18 +37,13 @@ poet.set({
 // ---------------------
 poet.init();
 
-//function ( locals ) {
-//  locals.postList.forEach(function ( post ) {
-//    console.log(post.title);
-//  });
-//}
-
 
 app.get( '/articles/:article', function ( req, res ) {
   var post = req.poet.getPost( req.params.post );
   if ( post ) {
     res.render( 'post', { post: post });
   } else {
+    res.status(404);
     res.render('4o4.jade', {
       url: req.url
     });
@@ -98,6 +93,7 @@ app.get('/rss', function ( req, res ) {
 app.get( '/', function ( req, res ) { res.render( 'index' ); });
 
 app.use(function(req, res) {
+  res.status(404);
   res.render('4o4.jade', {
     url: req.url
   });

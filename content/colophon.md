@@ -1,19 +1,19 @@
 {{{
-    "title"    : "How and Why I create this Blog",
+    "title"    : "How and why I create this Blog",
     "tags"     : ["node.js", "compass", "express", "Mobile-First"],
     "category" : "",
     "date"     : "05-29-2013"
 }}}
 
-A personal blog, why? The primary reason to write a personal blog, are all this thoughts in my head that needs to get out. Each day in the [office](http://nexum.de), I create *things*, learn *things*, have any visions of *things* that makes a developers life more attractive, find *things* I want to share and so on..
+A personal blog, why? Each day in the [office](http://nexum.de), I create *things*, learn *things*, envision *things* that makes a developer's life more attractive, I discover *things* I want to share and …
 
 <!--more-->
 
-All these *things* as mentioned before let my head explode if they can not come out, so lets kick them out - here they are!
+All these *things* bring my head to explode, if they can't get out, so let kick them out - here they are!
 
-I've written down each step of creating this simple webpage. Including all of my decisions, the current progress & other interesting findings I noticed on the way to how it looks now.
+Creating this simple webpage I write down step by step my decisions, the current state and other interesting findings.
 
-This is not really a technical suggestion how you should set up  your infrastructure or find the right tools for your requirements, more a "try to get things running with a crazy different approach". In this case, the "crazy difference" is called Node.js and how to build a blogging system with it.
+This is not really a technical instruction how you should set up  your infrastructure or find the right tools for your requirements, more a "try to get things running with a crazy different approach". In this case, the "crazy difference" is called node.js and how to build a blogging system on top of it.
 
 ## Let's go into some Detail
 
@@ -21,7 +21,7 @@ This is not really a technical suggestion how you should set up  your infrastruc
 
 > Ahoi. I work on a Redesign of my blog.
 
-Yeah, this logging entry is very self-explaning. I did some research finding other interesting blogs and analysed how they structure, design and arrange the necessary content elements of a blog. Here are some of them I really enjoy to read and that had inspired me:
+Yeah, this logging entry is very self-explaning. I did some research finding other interesting blogs and analysed how the structure and design looks like and arrange the necessary content elements of my blog. Here are some of them I really enjoyed to read and that inspired me:
 
 * [somerandomdude.com](http://somerandomdude.com/)
 * [deanmao.com](http://www.deanmao.com/)
@@ -42,9 +42,9 @@ Yeah, this logging entry is very self-explaning. I did some research finding oth
 Node.js is a very new and interesting serverside javascript environment. The non-blocking I/O event handling makes it very powerful and scalable, also it's pleasant to write javascript at both backend and frontend. I like the concept of writing my articles in clean markdown, store it on github and parse via Node.js. The simple blogging system Poet fulfils all of this requirements.
 </div>
 
-- It's well [documentated](http://jsantell.github.io/poet/).
+- It's well [documented](http://jsantell.github.io/poet/).
 - It supports Markdown, Yeah ;-)
-- The Source-Code looks very tidy and clean. There are few tests available - Used testing framework is [chai](http://chaijs.com/). This is not my absolutlly favourite, but anyway.
+- The Source-Code looks very tidy and clean. There are few tests available - Used testing framework is [chai](http://chaijs.com/). This is not my absolute favourite, but anyway.
 - The project repository on <a href="https://github.com/jsantell/poet" class="ico-github icon"> github</a> seems to be up to date.
 
 ### 04 April 2013
@@ -57,9 +57,7 @@ First, you never crush website elements into a smaller layout.
 Second, all website elements are visible in each breakpoint, no sucking *hide-on-mobile* development.
 You can give a fuck on IE (non media query supported browsers), they displayed in mobile styles.
 
-<s>If the mobile view (smallest) should be our starting point, you and your customer have to make a selection of the main features of the website/application. There is much less space on mobile devices than on a desktop screen, so all these unnecessary features the user never need, kicked out of the concept. Scaling website/application elements from small to larger screens is much simpler than in the other direction. If you scale down your website elements, you've initial created on a desktop screen, to fit into a mobile screen, it feels like a ..</s>
-
-It is important to understand that we don't create a *mobile* website - We create a website optimised for a mobile device screen. A user with a mobile device has the same objectives to visit our website like a user on stationary PC but in another context - so dam, show them the same website and not less.
+It is important to understand that we don't create a *mobile* website - we create a website optimized for a mobile device screen. A user with a mobile device has the same objectives to visit our website like a user on stationary PC but in another context - so damn, show them the same website and not less.
 
 - [Mobile First, Luke Wroblewski](http://www.lukew.com/resources/mobile_first.asp)
 - [The Many Faces of ‘Mobile First’, Brad Frost](http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/)
@@ -77,6 +75,6 @@ In the beginning of 2012, I got in touch with SASS and compass and I will never 
 > This Website is now running in maintenance mode. Powered by Node.js and hosted on heroku. The source code is available on github. Run <code> npm install</code> and then <code>grunt server</code> to check it out on your local machine. Requires Node and Grunt.js.
 
 And finally I need a Node.js hosting environment and I choose [Heroku](https://heroku.com/), because of it's awesome [toolbelt](https://toolbelt.heroku.com/) and it's free.
-Furthermore I write some grunt tasks, to make my life a lot easier and the development process a bit faster.
+Furthermore, I write some grunt tasks, to make my life much easier and the development process a bit faster.
 
-The result is this blog you are currently reading. The Design is very simple and yes .. very tedious, but I can't do it even better as a developer. Yep, the code is available on <a href="http://github.com/ixisio/andreasklein_org" class="ico-github icon"> github</a>.
+The result is this blog you are currently reading. The design is very simple and yes .. very tedious, but I can't do it even better as a developer. Yep, the code is available on <a href="http://github.com/ixisio/andreasklein_org" class="ico-github icon"> github</a>.

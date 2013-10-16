@@ -5,6 +5,17 @@
 
 ### Release History
 
+**0.10.0**
+
+* Update prettyPrint.js to parse all `@code <pre>`` tags, instead of looking for className `.prettyprint`.
+* Update 404 Templates
+  * Send right 404 Status. With Express Middleware this looks like `res.status(404);
+  * Update 404 Page Texts
+* Performace optimization
+  * Remove `v7.js` & the whole jQuery library
+  * Start prettyPrint() by body.onload event
+  * No Email-Address obfuscating anymore
+
 **0.9.2**
 
 * Remove :hover Styles for touch-enabled devices

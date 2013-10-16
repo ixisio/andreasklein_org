@@ -3,7 +3,7 @@ html(lang="en", class="#{typeof post !== 'undefined' ? 'type-article' : 'type-ov
 
   head
     include includes/head
-  body
+  body(onload="prettyPrint()")
     #container
       include includes/header
 

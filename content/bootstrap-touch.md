@@ -20,7 +20,14 @@ The framework has a *build-in* touch detection and invoke its functionality only
 It's not a part of BS, it's an extension that works hand-in-hand with BS.
 
 ## How it works
-You have to load two additional files (`bootstrap-touch.js`, `bootstrap-touch.css`) into your existing BS project. If the plugin detects a touch-enabled device, it auto-overwrites the default component behavior and styling.
+You have to load two additional files into your existing BS project.
+
+```javascript
+bootstrap-touch.js
+bootstrap-touch.css
+```
+
+If the plugin detects a touch-enabled device, it auto-overwrites the default component behavior and styling.
 If you are familiar with [Grunt.js - the JavaScript Task Runner](http://gruntjs.com/), you can also use a modified BS build process to integrate/*concat* BS-Touch directly into your bootstrap files (future Todo).
 
 ## Project State
@@ -56,6 +63,8 @@ Last Week, I released a early prototype of one BS component for touch-enabled de
 <script src="/demos/bootstrap-touch-carousel/vendor/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/demos/bootstrap-touch-carousel/vendor/bootstrap/assets/js/holder.js"></script>
 <script src="/demos/bootstrap-touch-carousel/dist/js/bootstrap-touch-carousel.js"></script>
+
+
 
 ## Next Steps
 If you are interested in this project, please help me to find some cool ideas on how to realize something like this, [fork](https://github.com/ixisio/bootstrap-touch) the project on Github or just have a talk on [twitter](http://twitter.com/ixisio).
