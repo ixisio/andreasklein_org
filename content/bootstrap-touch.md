@@ -2,7 +2,8 @@
     "title"    : "Bootstrap Touch",
     "tags"     : ["bootstrap", "touch"],
     "category" : "",
-    "date"     : "09 October 2013"
+    "date"     : "09-10-2013",
+    "dateText" : "9 October 2013"
 }}}
 
 One of [Twitter Bootstrap's](http://getbootstrap.com/) largest gabs is, it's not optimized for touch-enabled devices.

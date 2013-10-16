@@ -1,15 +1,15 @@
 {{{
     "title"    : "How and why I create this Blog",
-    "tags"     : ["node.js", "compass", "express", "Mobile-First"],
+    "tags"     : ["node.js", "rwd"],
     "category" : "",
-    "date"     : "05-29-2013"
+    "date"     : "05-29-2013",
+    "dateText" : "29 May 2013"
 }}}
 
 A personal blog, why? Each day in the [office](http://nexum.de), I create *things*, learn *things*, envision *things* that makes a developer's life more attractive, I discover *things* I want to share and …
+All these *things* bring my head to explode, if they can't get out, so let kick them out - here they are!
 
 <!--more-->
-
-All these *things* bring my head to explode, if they can't get out, so let kick them out - here they are!
 
 Creating this simple webpage I write down step by step my decisions, the current state and other interesting findings.
 

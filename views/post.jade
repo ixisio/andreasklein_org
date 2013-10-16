@@ -10,15 +10,15 @@ block content
 
     div.comments
       h2#comments Comments
-      p Ask me, criticize me, support me, have a constructive discussion or just share your thoughts on twitter&nbsp;
+      p Ask me, criticize me, support me, discuss constructively or just share your thoughts on twitter&nbsp;
         a(href="//twitter.com/intent/tweet?original_referer=#{post.url}&text=@ixisio #{post.title}&url=#{post.url}") @ixisio
 
     div.post-meta
       span.post-date#date
-        i written on <b>#{post.date.getDate()}.#{post.date.getMonth()+1}.#{post.date.getFullYear()} </b>
+        i written on <b>#{post.dateText}</b>
       if(post.tags.length)
         span.tags#tags
-          i and filed under
+          i &nbsp;and filed under
           ul
             - var i = 0;
             - each tag in post.tags
