@@ -7,7 +7,7 @@
 
 **0.10.0**
 
-* Update prettyPrint.js to parse all `@code <pre>`` tags, instead of looking for className `.prettyprint`.
+* Update prettyPrint.js to parse all `@code <pre>` tags, instead of looking for className `.prettyprint`.
 * Update 404 Templates
   * Send right 404 Status. With Express Middleware this looks like `res.status(404);
   * Update 404 Page Texts
