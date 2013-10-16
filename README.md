@@ -5,6 +5,11 @@
 
 ### Release History
 
+**0.10.1**
+
+* Enable :hover states only for non-touch devices
+
+
 **0.10.0**
 
 * Update prettyPrint.js to parse all `@code <pre>` tags, instead of looking for className `.prettyprint`.

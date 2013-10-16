@@ -4,3 +4,6 @@ script
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 script(src='/scripts/vendor/prettify.min.js')
+script
+  if (!("ontouchstart" in window || navigator.msMaxTouchPoints))
+    document.documentElement.className += ' non-touch';
