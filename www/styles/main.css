@@ -186,28 +186,23 @@ body {
 /* line 44, scss/_layout.scss */
 #face {
   text-align: center;
-  opacity: 1;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
 }
-/* line 48, scss/_layout.scss */
+/* line 46, scss/_layout.scss */
 #face img {
   width: 100px;
   height: 100px;
 }
 
-/* line 52, scss/_layout.scss */
+/* line 54, scss/_layout.scss */
 .type-article #hed {
   padding-top: 2em;
 }
-/* line 56, scss/_layout.scss */
+/* line 58, scss/_layout.scss */
 .type-article .post-meta {
   border-top: 1px solid #eeeeee;
 }
 
-/* line 63, scss/_layout.scss */
+/* line 65, scss/_layout.scss */
 #main {
   width: 100%;
   float: right;
@@ -216,51 +211,51 @@ body {
   display: inline;
   padding-bottom: 2em;
 }
-/* line 67, scss/_layout.scss */
+/* line 69, scss/_layout.scss */
 #main .posts {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 71, scss/_layout.scss */
+/* line 73, scss/_layout.scss */
 #main .posts > li {
   margin: 0 0 20px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 78, scss/_layout.scss */
+/* line 80, scss/_layout.scss */
 #main .posts .readmore a {
   text-decoration: none;
 }
-/* line 84, scss/_layout.scss */
+/* line 86, scss/_layout.scss */
 #main .post-title {
   display: block;
   color: #444444;
   text-decoration: none;
 }
-/* line 94, scss/_layout.scss */
+/* line 96, scss/_layout.scss */
 #main .post-meta {
   font-size: 0.675em;
 }
-/* line 97, scss/_layout.scss */
+/* line 99, scss/_layout.scss */
 #main .post-meta .tags ul {
   display: inline;
   margin: 0;
 }
-/* line 102, scss/_layout.scss */
+/* line 104, scss/_layout.scss */
 #main .post-meta .tags li {
   display: inline;
 }
-/* line 105, scss/_layout.scss */
+/* line 107, scss/_layout.scss */
 #main .post-meta .tags li a {
   font-weight: bold;
   padding-left: 0.35em;
 }
-/* line 110, scss/_layout.scss */
+/* line 112, scss/_layout.scss */
 #main .post-meta .post-date, #main .post-meta .tags .label {
   color: #555555;
 }
 
-/* line 118, scss/_layout.scss */
+/* line 120, scss/_layout.scss */
 #foot {
   width: 100%;
   padding-top: 5em;
@@ -268,7 +263,7 @@ body {
   color: #999999;
   font-size: 0.875em;
 }
-/* line 125, scss/_layout.scss */
+/* line 127, scss/_layout.scss */
 #foot a {
   color: #999999;
 }
@@ -983,19 +978,15 @@ pre .fun {
   opacity: 1;
 }
 /* line 9, scss/_non-touch.scss */
-.non-touch #face:hover {
-  opacity: 0.92;
-}
-/* line 10, scss/_non-touch.scss */
 .non-touch #hed .socials a:hover {
   color: #e9633b;
 }
-/* line 13, scss/_non-touch.scss */
+/* line 12, scss/_non-touch.scss */
 .non-touch #main .readmore a:hover,
 .non-touch #main .post-title:hover {
   text-decoration: underline;
 }
-/* line 18, scss/_non-touch.scss */
+/* line 17, scss/_non-touch.scss */
 .non-touch #hed .socials a {
   padding-right: 5px;
 }

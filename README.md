@@ -5,6 +5,7 @@
 
 ### Release History
 
+
 **0.11.0**
 
 * Frameless Figures on phones. Image Indentation on larger screen.

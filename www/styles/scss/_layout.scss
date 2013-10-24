@@ -43,9 +43,11 @@ body {
 
 #face {
     text-align: center;
-    opacity: 1;
-    @include transition(opacity 0.4s ease-in);
-    img { @extend .img-circle; width: 100px; height: 100px;}
+    img {
+      @extend .img-circle;
+      width: 100px;
+      height: 100px;
+    }
 }
 
 .type-article {
