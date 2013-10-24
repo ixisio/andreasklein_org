@@ -9,7 +9,7 @@
 **0.11.0**
 
 * Frameless Figures on phones. Image Indentation on larger screen.
-* Slying Figcaptions.
+* Styling Figure Captions.
 * Refactoring
 
 **0.10.1**
