@@ -17,6 +17,9 @@ body {
 #container {
     @include container;
     position: relative;
+
+    // Phone frameless images
+    overflow-x: hidden;
 }
 
 // Master Header

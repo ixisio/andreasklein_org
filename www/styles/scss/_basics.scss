@@ -1,5 +1,5 @@
 //
-// Typography
+// Typography & Basic
 // --------------------------------------------------
 
 
@@ -113,6 +113,7 @@ ol ul {
 }
 li {
   line-height: $baseLineHeight;
+  margin-bottom: 5px;
 }
 ul.unstyled,
 ol.unstyled {
@@ -121,11 +122,35 @@ ol.unstyled {
 }
 
 
+// Figures
+// -------------------------
+.content {
+
+  figure {
+    margin-left: -15%; // ~
+    width: 130%; // ~
+    margin-bottom: 1.875em; // ~30px
+
+    img {
+      margin-bottom: 5px;
+    }
+  }
+
+  figcaption {
+    color: $gray;
+    font-size: 0.875em; // 14px
+
+    padding: 0 15%;
+    text-align: center;
+  }
+}
+
+
 // MISC
 // ----
 
 // Horizontal rules
-hr {
+hr, %hr {
   margin: $baseLineHeight 0;
   border: 0;
   border-top: 1px solid $hrBorder;

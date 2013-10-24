@@ -14,7 +14,7 @@ The client-server interface needs to have better and faster communication. "Hey 
 
 Reduce a website to the basics: text, media & hyperlinks. Each browser of the world is able to display these things perfectly in every environment, without any additional stylesheet or javascript.
 Now you could add further informations to your site ("progressive enhancement"). Change the look of your site to a more beautiful design. Add columns, rows and whitespace to give your content some more readability.
-Use CSS3 features to display animations smoother, for example. 
+Use CSS3 features to display animations smoother, for example.
 
 The browser handles all of the rest! (2044)
 
@@ -25,7 +25,12 @@ The multi- context, device, viewport, density, input-type, bandwidth web<br>
 How to solve this? Is it possible to solve it with the current tools/technics? By using Media Queries, [which are a Hack?](http://ianstormtaylor.com/media-queries-are-a-hack/) What about testing? One million different devices multiplied by 5 to 10 different OS's multiplied by 10 to 20 different browsers is unequal to any possible QA strategy.
 The browser is the only *Player of the Game* that knows exactly all parameters of the device, the OS, the actual bandwidth, and so on... everything!
 
----
+<figure>
+  <img src="/gfx/this-will-be-the-web.png" alt="This will be the Web, Brad Frost">
+  <figcaption>
+    "This will be the Web", <a href="https://twitter.com/brad_frost">@brad_frost</a>
+  </figcaption>
+</figure>
 
 There needs to be a new kind of communication between client and server. It should take place long before any website assets could be downloaded (e.g Image Prefetching).
 
@@ -48,6 +53,17 @@ Okay! Seems as if we are not ready for this new web!? If I say *we*, I mean the 
 > I wrote down these ideas, after a night of horror :-] [@me](http://twitter.com/ixisio)
 
 So guys, please be lenient with me!
+
+
+## Resources and further Reading
+
+* [Future-Ready Content](http://alistapart.com/article/future-ready-content), Sara Wachter-Boettcher [@sara_ann_marie](https://twitter.com/sara_ann_marie)
+* [HTTP Client Hints](http://tools.ietf.org/html/draft-grigorik-http-client-hints-00), Ilya grigorik [@igrigorik](https://twitter.com/igrigorik)
+* [A non-responsive approach to building cross-device webapps](http://www.html5rocks.com/en/mobile/cross-device/), Boris Smus [@borismus](https://twitter.com/borismus)
+* [Responsive Web Design: Missing the Point](http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/), Brad Frost [@brad_frost](https://twitter.com/brad_frost)
+* [Future Friendly](http://futurefriend.ly/), Luke Wroblewski [@lukew](https://twitter.com/lukew), et al.
+
+*Credits to [Brad Frost](https://twitter.com/brad_frost) for the awesome Image [[Source](http://bradfrostweb.com/blog/post/this-is-the-web/)]*
 
 
 

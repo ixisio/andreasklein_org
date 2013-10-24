@@ -8,12 +8,13 @@
 
 // Layout & Grid
 @import "scss/_layout";
-@import "scss/_breakpoints";
-@import "scss/_non-touch";
 
 // Scaffolding base elememnts
 // declare type rules
-// handle sprites
-@import "scss/_type", "scss/_icons", "scss/_prettify";
+@import "scss/_basics", "scss/_icons", "scss/_prettify";
+
+// Breakpoints & Non-Touch Devices
+@import "scss/_breakpoints";
+@import "scss/_non-touch";
 
 @import "scss/_utilities";

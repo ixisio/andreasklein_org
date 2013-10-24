@@ -25,10 +25,10 @@
           margin: 0 0 $baseLineHeight / 2;
         }
 
-        h1 { font-size: 2.25em; line-height: 2.5em; }
-        h2 { font-size: 1.875em; line-height: 2.125em; }
-        h3 { font-size: 1.5em; line-height: 2.125em; }
-        h4 { font-size: 1.125em; line-height: 1.25em; }
+        h1 { font-size: 2.25em; line-height: 1.2em; }
+        h2 { font-size: 1.875em; line-height: 1.6em; }
+        h3 { font-size: 1.5em; line-height: 1em; }
+        h4 { font-size: 1.125em; line-height: 1em; }
 
         #main {
           h1, > h2 {
@@ -119,6 +119,20 @@
         .content {
 
           figure {
+
+            max-width: 100%;
+
+            border-top: 1px solid $hrBorder;
+            border-bottom: 1px solid $hrBorder;
+
+            margin-top: $baseLineHeight;
+            margin-bottom: $baseLineHeight !important;
+            padding: $baseLineHeight 0 ($baseLineHeight/2) 0;
+
+            img {
+              margin-bottom: ($baseLineHeight/2);
+            }
+
             &.pull-left {
               margin-left: -14.47368%;
             }
@@ -126,6 +140,11 @@
             &.pull-right {
               margin-right: -14.47368%;
             }
+          }
+
+          figcaption {
+            text-align: left;
+            padding: 0;
           }
 
         }

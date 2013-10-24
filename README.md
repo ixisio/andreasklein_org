@@ -5,6 +5,12 @@
 
 ### Release History
 
+**0.11.0**
+
+* Frameless Figures on phones. Image Indentation on larger screen.
+* Slying Figcaptions.
+* Refactoring
+
 **0.10.1**
 
 * Enable :hover states only for non-touch devices
