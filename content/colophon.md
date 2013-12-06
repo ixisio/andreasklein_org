@@ -45,7 +45,7 @@ Node.js is a very new and interesting serverside javascript environment. The non
 - It's well [documented](http://jsantell.github.io/poet/).
 - It supports Markdown, Yeah ;-)
 - The Source-Code looks very tidy and clean. There are few tests available - Used testing framework is [chai](http://chaijs.com/). This is not my absolute favourite, but anyway.
-- The project repository on <a href="https://github.com/jsantell/poet" class="ico-github icon"> github</a> seems to be up to date.
+- The project repository on <a href="https://github.com/jsantell/poet" class="icon-github icon"> github</a> seems to be up to date.
 
 ### 04 April 2013
 
@@ -77,4 +77,4 @@ In the beginning of 2012, I got in touch with SASS and compass and I will never 
 And finally I need a Node.js hosting environment and I choose [Heroku](https://heroku.com/), because of it's awesome [toolbelt](https://toolbelt.heroku.com/) and it's free.
 Furthermore, I write some grunt tasks, to make my life much easier and the development process a bit faster.
 
-The result is this blog you are currently reading. The design is very simple and yes .. very tedious, but I can't do it even better as a developer. Yep, the code is available on <a href="http://github.com/ixisio/andreasklein_org" class="ico-github icon"> github</a>.
+The result is this blog you are currently reading. The design is very simple and yes .. very tedious, but I can't do it even better as a developer. Yep, the code is available on <a href="http://github.com/ixisio/andreasklein_org" class="icon-github icon"> github</a>.

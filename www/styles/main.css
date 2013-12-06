@@ -381,34 +381,39 @@ h2.sub {
 }
 
 /* line 80, scss/_basics.scss */
+h2.icon:before {
+  padding-right: 0.5em;
+}
+
+/* line 83, scss/_basics.scss */
 .content h2, .content h3 {
   margin-top: 50px;
 }
 
-/* line 83, scss/_basics.scss */
+/* line 86, scss/_basics.scss */
 .content h2 + h3 {
   margin-top: 26px;
 }
 
-/* line 90, scss/_basics.scss */
+/* line 93, scss/_basics.scss */
 a {
   color: inherit;
   text-decoration: underline;
   font-weight: 100;
 }
 
-/* line 95, scss/_basics.scss */
+/* line 98, scss/_basics.scss */
 a.icon {
   text-decoration: none;
 }
 
-/* line 104, scss/_basics.scss */
+/* line 107, scss/_basics.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 13px 25px;
 }
 
-/* line 111, scss/_basics.scss */
+/* line 114, scss/_basics.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -416,30 +421,30 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 114, scss/_basics.scss */
+/* line 117, scss/_basics.scss */
 li {
   line-height: 26px;
   margin-bottom: 5px;
 }
 
-/* line 119, scss/_basics.scss */
+/* line 122, scss/_basics.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
 
-/* line 129, scss/_basics.scss */
+/* line 132, scss/_basics.scss */
 .content figure {
   margin-left: -15%;
   width: 130%;
   margin-bottom: 1.875em;
 }
-/* line 134, scss/_basics.scss */
+/* line 137, scss/_basics.scss */
 .content figure img {
   margin-bottom: 5px;
 }
-/* line 139, scss/_basics.scss */
+/* line 142, scss/_basics.scss */
 .content figcaption {
   color: #555555;
   font-size: 0.875em;
@@ -447,7 +452,7 @@ ol.unstyled {
   text-align: center;
 }
 
-/* line 153, scss/_basics.scss */
+/* line 156, scss/_basics.scss */
 hr {
   margin: 26px 0;
   border: 0;
@@ -455,25 +460,25 @@ hr {
   border-bottom: 1px solid white;
 }
 
-/* line 161, scss/_basics.scss */
+/* line 164, scss/_basics.scss */
 abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #999999;
 }
 
-/* line 165, scss/_basics.scss */
+/* line 168, scss/_basics.scss */
 abbr.initialism {
   font-size: 90%;
   text-transform: uppercase;
 }
 
-/* line 171, scss/_basics.scss */
+/* line 174, scss/_basics.scss */
 blockquote {
   padding: 0 0 0 15px;
   margin: 30px 0;
   border-left: 5px solid #eeeeee;
 }
-/* line 175, scss/_basics.scss */
+/* line 178, scss/_basics.scss */
 blockquote p {
   opacity: 0.6;
   margin-bottom: 0;
@@ -485,17 +490,17 @@ blockquote p {
   font-weight: 300;
   line-height: 26px;
 }
-/* line 181, scss/_basics.scss */
+/* line 184, scss/_basics.scss */
 blockquote small {
   display: block;
   line-height: 26px;
   color: #999999;
 }
-/* line 185, scss/_basics.scss */
+/* line 188, scss/_basics.scss */
 blockquote small:before {
   content: '\2014 \00A0';
 }
-/* line 191, scss/_basics.scss */
+/* line 194, scss/_basics.scss */
 blockquote.pull-right {
   float: right;
   padding-right: 15px;
@@ -503,21 +508,21 @@ blockquote.pull-right {
   border-right: 5px solid #eeeeee;
   border-left: 0;
 }
-/* line 198, scss/_basics.scss */
+/* line 201, scss/_basics.scss */
 blockquote.pull-right p,
 blockquote.pull-right small {
   text-align: right;
 }
-/* line 202, scss/_basics.scss */
+/* line 205, scss/_basics.scss */
 blockquote.pull-right small:before {
   content: '';
 }
-/* line 205, scss/_basics.scss */
+/* line 208, scss/_basics.scss */
 blockquote.pull-right small:after {
   content: '\00A0 \2014';
 }
 
-/* line 216, scss/_basics.scss */
+/* line 219, scss/_basics.scss */
 q:before,
 q:after,
 blockquote:before,
@@ -525,7 +530,7 @@ blockquote:after {
   content: "";
 }
 
-/* line 221, scss/_basics.scss */
+/* line 224, scss/_basics.scss */
 address {
   display: block;
   margin-bottom: 26px;
@@ -533,14 +538,14 @@ address {
   line-height: 26px;
 }
 
-/* line 229, scss/_basics.scss */
+/* line 232, scss/_basics.scss */
 ::-moz-selection {
   background: #222222;
   color: #eeeeee;
   text-shadow: none;
 }
 
-/* line 230, scss/_basics.scss */
+/* line 233, scss/_basics.scss */
 ::selection {
   background: #222222;
   color: #eeeeee;
@@ -548,165 +553,80 @@ address {
 }
 
 @font-face {
-  font-family: 'icon-font';
-  src: url('/styles/fonts/icon-font.eot');
-  src: url('/styles/fonts/icon-font.woff') format("woff"), url('/styles/fonts/icon-font.eot?#iefix') format("embedded-opentype"), url('/styles/fonts/icon-font.svg#icon-font') format("svg"), url('/styles/fonts/icon-font.ttf') format("truetype");
+  font-family: 'icons';
+  src: url('/styles/fonts/icons.eot');
+  src: url('/styles/fonts/icons.woff') format("woff"), url('/styles/fonts/icons.eot?#iefix') format("embedded-opentype"), url('/styles/fonts/icons.svg#icons') format("svg"), url('/styles/fonts/icons.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 /* line 12, scss/_icons.scss */
-[class^="ico-"]:before, [class*=" ico-"]:before {
-  font-family: 'icon-font';
-  font-style: normal;
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icons';
   speak: none;
+  font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 20, scss/_icons.scss */
-.ico-home:before {
-  content: "\39";
+/* line 26, scss/_icons.scss */
+.icon-twitter:before {
+  content: "\e600";
 }
 
-/* line 24, scss/_icons.scss */
-.ico-logo:before {
-  content: "\38";
-}
-
-/* line 28, scss/_icons.scss */
-.ico-pencil:before {
-  content: "\27";
+/* line 29, scss/_icons.scss */
+.icon-mail:before {
+  content: "\e601";
 }
 
 /* line 32, scss/_icons.scss */
-.ico-picture:before {
-  content: "\2a";
+.icon-github:before {
+  content: "\e602";
 }
 
-/* line 36, scss/_icons.scss */
-.ico-date:before {
-  content: "\2b";
+/* line 35, scss/_icons.scss */
+.icon-quill:before {
+  content: "\e603";
 }
 
-/* line 40, scss/_icons.scss */
-.ico-search:before {
-  content: "\22";
+/* line 38, scss/_icons.scss */
+.icon-profile:before {
+  content: "\e604";
+}
+
+/* line 41, scss/_icons.scss */
+.icon-grin:before {
+  content: "\e605";
 }
 
 /* line 44, scss/_icons.scss */
-.ico-screen:before {
-  content: "\23";
+.icon-cool:before {
+  content: "\e606";
 }
 
-/* line 48, scss/_icons.scss */
-.ico-laptop:before {
-  content: "\24";
+/* line 47, scss/_icons.scss */
+.icon-comment:before {
+  content: "\e607";
 }
 
-/* line 52, scss/_icons.scss */
-.ico-mobile:before {
-  content: "\25";
+/* line 50, scss/_icons.scss */
+.icon-paper:before {
+  content: "\e608";
+}
+
+/* line 53, scss/_icons.scss */
+.icon-home:before {
+  content: "\e609";
 }
 
 /* line 56, scss/_icons.scss */
-.ico-tablet:before {
-  content: "\26";
-}
-
-/* line 60, scss/_icons.scss */
-.ico-mobile-2:before {
-  content: "\28";
-}
-
-/* line 64, scss/_icons.scss */
-.ico-paper:before {
-  content: "\29";
-}
-
-/* line 68, scss/_icons.scss */
-.ico-copy:before {
-  content: "\2b";
-}
-
-/* line 72, scss/_icons.scss */
-.ico-coffee:before {
-  content: "\2c";
-}
-
-/* line 76, scss/_icons.scss */
-.ico-twitter:before {
-  content: "\2d";
-}
-
-/* line 80, scss/_icons.scss */
-.ico-github:before {
-  content: "\2e";
-}
-
-/* line 84, scss/_icons.scss */
-.ico-html5:before {
-  content: "\2f";
-}
-
-/* line 88, scss/_icons.scss */
-.ico-css3:before {
-  content: "\30";
-}
-
-/* line 92, scss/_icons.scss */
-.ico-facebook:before {
-  content: "\31";
-}
-
-/* line 96, scss/_icons.scss */
-.ico-apple:before {
-  content: "\32";
-}
-
-/* line 100, scss/_icons.scss */
-.ico-file-css:before {
-  content: "\33";
-}
-
-/* line 104, scss/_icons.scss */
-.ico-file-xml:before {
-  content: "\34";
-}
-
-/* line 108, scss/_icons.scss */
-.ico-mail:before {
-  content: "\35";
-}
-
-/* line 112, scss/_icons.scss */
-.ico-folder:before, .ico-tags:before {
-  content: "\36";
-}
-
-/* line 116, scss/_icons.scss */
-.ico-wordpress:before {
-  content: "\37";
-}
-
-/* line 120, scss/_icons.scss */
-.ico-share:before {
-  content: "\3a";
-}
-
-/* line 124, scss/_icons.scss */
-.ico-user:before {
-  content: "\3b";
-}
-
-/* line 128, scss/_icons.scss */
-.ico-comments:before {
-  content: "\3c";
-}
-
-/* line 132, scss/_icons.scss */
-.ico-icomoon:before {
-  content: "\21";
+.icon-shocked:before {
+  content: "\e60a";
 }
 
 /* line 1, scss/_prettify.scss */
@@ -988,7 +908,7 @@ pre .fun {
 }
 /* line 17, scss/_non-touch.scss */
 .non-touch #hed .socials a {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 /* line 6, scss/_utilities.scss */

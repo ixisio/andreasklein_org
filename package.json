@@ -1,7 +1,7 @@
 {
   "name": "www-andreasklein-v7",
   "description": "My personal space for article, notes & ideas on the web.",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "author": {
     "name": "Andreas Klein",
     "url": "http://andreasklein.org"
@@ -20,7 +20,7 @@
     "html-to-text": "0.0.x"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "~0.4.2",
     "grunt-open": "~0.2.2",
     "grunt-contrib-jshint": "~0.3.0",
     "grunt-contrib-compass": "~0.1.3",

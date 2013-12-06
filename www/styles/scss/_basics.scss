@@ -77,6 +77,9 @@ h2.sub {
   font-weight: 100;
   @extend h6;
 }
+h2.icon:before {
+  padding-right: 0.5em;
+}
 .content h2, .content h3 {
   margin-top: 50px;
 }

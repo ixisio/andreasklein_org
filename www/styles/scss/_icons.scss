@@ -1,134 +1,58 @@
 @font-face {
-  font-family: 'icon-font';
-  src: font-url("icon-font.eot");
-  src:  font-url("icon-font.woff") format("woff"),
-        font-url("icon-font.eot?#iefix") format("embedded-opentype"),
-        font-url("icon-font.svg#icon-font") format("svg"),
-        font-url("icon-font.ttf") format("truetype");
+  font-family: 'icons';
+  src: font-url("icons.eot");
+  src:  font-url("icons.woff") format("woff"),
+        font-url("icons.eot?#iefix") format("embedded-opentype"),
+        font-url("icons.svg#icons") format("svg"),
+        font-url("icons.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="ico-"]:before, [class*=" ico-"]:before {
-  font-family: 'icon-font';
-  font-style: normal;
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icons';
   speak: none;
+  font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-home:before {
-  content: "\39";
+.icon-twitter:before {
+  content: "\e600";
 }
-
-.ico-logo:before {
-  content: "\38";
+.icon-mail:before {
+  content: "\e601";
 }
-
-.ico-pencil:before {
-  content: "\27";
+.icon-github:before {
+  content: "\e602";
 }
-
-.ico-picture:before {
-  content: "\2a";
+.icon-quill:before {
+  content: "\e603";
 }
-
-.ico-date:before {
-  content: "\2b";
+.icon-profile:before {
+  content: "\e604";
 }
-
-.ico-search:before {
-  content: "\22";
+.icon-grin:before {
+  content: "\e605";
 }
-
-.ico-screen:before {
-  content: "\23";
+.icon-cool:before {
+  content: "\e606";
 }
-
-.ico-laptop:before {
-  content: "\24";
+.icon-comment:before {
+  content: "\e607";
 }
-
-.ico-mobile:before {
-  content: "\25";
+.icon-paper:before {
+  content: "\e608";
 }
-
-.ico-tablet:before {
-  content: "\26";
+.icon-home:before {
+  content: "\e609";
 }
-
-.ico-mobile-2:before {
-  content: "\28";
-}
-
-.ico-paper:before {
-  content: "\29";
-}
-
-.ico-copy:before {
-  content: "\2b";
-}
-
-.ico-coffee:before {
-  content: "\2c";
-}
-
-.ico-twitter:before {
-  content: "\2d";
-}
-
-.ico-github:before {
-  content: "\2e";
-}
-
-.ico-html5:before {
-  content: "\2f";
-}
-
-.ico-css3:before {
-  content: "\30";
-}
-
-.ico-facebook:before {
-  content: "\31";
-}
-
-.ico-apple:before {
-  content: "\32";
-}
-
-.ico-file-css:before {
-  content: "\33";
-}
-
-.ico-file-xml:before {
-  content: "\34";
-}
-
-.ico-mail:before {
-  content: "\35";
-}
-
-.ico-folder:before, .ico-tags:before {
-  content: "\36";
-}
-
-.ico-wordpress:before {
-  content: "\37";
-}
-
-.ico-share:before {
-  content: "\3a";
-}
-
-.ico-user:before {
-  content: "\3b";
-}
-
-.ico-comments:before {
-  content: "\3c";
-}
-
-.ico-icomoon:before {
-  content: "\21";
+.icon-shocked:before {
+  content: "\e60a";
 }
