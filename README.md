@@ -9,15 +9,15 @@
 
 * Add a new fresh set of Icons
 * Clean up SCSS Files
-* Change the look if `<h2>` Tags
+* Change the look of `<h2>` Tags
 * Visual changes to 404 page
 * Update grunt.js to v0.4.2
 * Some minor improvements
 
 **0.11.0**
 
-* Frameless Figures on phones. Image Indentation on larger screen.
-* Styling Figure Captions.
+* Frameless figures on phones. Image indentation on larger screen.
+* Styling figure captions.
 * Refactoring
 
 **0.10.1**
