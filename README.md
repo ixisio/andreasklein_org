@@ -1,6 +1,6 @@
 ## andreasklein_org
 
-**.. My personal space for article, notes & ideas on the web. Written in pure JavaScript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)**
+**.. My personal space for article, notes & ideas on the web. Written in pure Javascript powered by [Node.js](http://nodejs.org/), [Grunt.js](http://gruntjs.com/) & [Express](http://expressjs.com/)**
 
 
 ### Release History
@@ -8,7 +8,7 @@
 **0.12.0**
 
 * Add a new fresh set of Icons
-* Clean up SCSS Files
+* Clean up SASS Files
 * Change the look of `<h2>` Tags
 * Visual changes to 404 page
 * Update grunt.js to v0.4.2
@@ -29,7 +29,7 @@
 
 * Update prettyPrint.js to parse all `@code <pre>` tags, instead of looking for className `.prettyprint`.
 * Update 404 Templates
-  * Send right 404 Status. With Express Middleware this looks like `res.status(404);
+  * Send right 404 Status. With Express Middleware this looks like `res.status(404);`
   * Update 404 Page Texts
 * Performace optimization
   * Remove `v7.js` & the whole jQuery library
@@ -83,3 +83,6 @@
 * add express
 * add basic routes (pages, posts, cats, tags)
 * finish homepage
+
+
+&copy; 2014 Andreas Klein
