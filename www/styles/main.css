@@ -1,4 +1,4 @@
-/* line 18, scss/_reset.scss */
+/* line 9, scss/_reset.scss */
 article,
 aside,
 details,
@@ -12,7 +12,7 @@ section {
   display: block;
 }
 
-/* line 27, scss/_reset.scss */
+/* line 25, scss/_reset.scss */
 audio,
 canvas,
 video {
@@ -40,13 +40,13 @@ a:focus {
   outline-offset: -2px;
 }
 
-/* line 54, scss/_reset.scss */
+/* line 53, scss/_reset.scss */
 a:hover,
 a:active {
   outline: 0;
 }
 
-/* line 62, scss/_reset.scss */
+/* line 61, scss/_reset.scss */
 sub,
 sup {
   position: relative;
@@ -74,7 +74,7 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 93, scss/_reset.scss */
+/* line 90, scss/_reset.scss */
 button,
 input,
 select,
@@ -84,21 +84,21 @@ textarea {
   vertical-align: middle;
 }
 
-/* line 99, scss/_reset.scss */
+/* line 98, scss/_reset.scss */
 button,
 input {
   *overflow: visible;
   line-height: normal;
 }
 
-/* line 104, scss/_reset.scss */
+/* line 103, scss/_reset.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-/* line 111, scss/_reset.scss */
+/* line 108, scss/_reset.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -115,7 +115,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
 }
 
-/* line 122, scss/_reset.scss */
+/* line 121, scss/_reset.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -150,7 +150,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-/* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/utilities/general/_clearfix.scss */
 #container:after {
   content: "";
   display: table;
@@ -413,7 +413,7 @@ ul, ol {
   margin: 0 0 13px 25px;
 }
 
-/* line 114, scss/_basics.scss */
+/* line 111, scss/_basics.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -427,7 +427,7 @@ li {
   margin-bottom: 5px;
 }
 
-/* line 122, scss/_basics.scss */
+/* line 121, scss/_basics.scss */
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
@@ -508,7 +508,7 @@ blockquote.pull-right {
   border-right: 5px solid #eeeeee;
   border-left: 0;
 }
-/* line 201, scss/_basics.scss */
+/* line 200, scss/_basics.scss */
 blockquote.pull-right p,
 blockquote.pull-right small {
   text-align: right;
@@ -522,7 +522,7 @@ blockquote.pull-right small:after {
   content: '\00A0 \2014';
 }
 
-/* line 219, scss/_basics.scss */
+/* line 216, scss/_basics.scss */
 q:before,
 q:after,
 blockquote:before,
@@ -554,12 +554,11 @@ address {
 
 @font-face {
   font-family: 'icons';
-  src: url('/styles/fonts/icons.eot');
-  src: url('/styles/fonts/icons.woff') format("woff"), url('/styles/fonts/icons.eot?#iefix') format("embedded-opentype"), url('/styles/fonts/icons.svg#icons') format("svg"), url('/styles/fonts/icons.ttf') format("truetype");
+  src: url('/styles/fonts/icons.eot?1386323570');
+  src: url('/styles/fonts/icons.woff?1386323570') format("woff"), url('/styles/fonts/icons.eot?#iefix') format("embedded-opentype"), url('/styles/fonts/icons.svg?1386323570#icons') format("svg"), url('/styles/fonts/icons.ttf?1386323570') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 12, scss/_icons.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icons';
@@ -575,56 +574,62 @@ address {
 }
 
 /* line 26, scss/_icons.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  speak: none;
+}
+
+/* line 31, scss/_icons.scss */
 .icon-twitter:before {
   content: "\e600";
 }
 
-/* line 29, scss/_icons.scss */
+/* line 34, scss/_icons.scss */
 .icon-mail:before {
   content: "\e601";
 }
 
-/* line 32, scss/_icons.scss */
+/* line 37, scss/_icons.scss */
 .icon-github:before {
   content: "\e602";
 }
 
-/* line 35, scss/_icons.scss */
+/* line 40, scss/_icons.scss */
 .icon-quill:before {
   content: "\e603";
 }
 
-/* line 38, scss/_icons.scss */
+/* line 43, scss/_icons.scss */
 .icon-profile:before {
   content: "\e604";
 }
 
-/* line 41, scss/_icons.scss */
+/* line 46, scss/_icons.scss */
 .icon-grin:before {
   content: "\e605";
 }
 
-/* line 44, scss/_icons.scss */
+/* line 49, scss/_icons.scss */
 .icon-cool:before {
   content: "\e606";
 }
 
-/* line 47, scss/_icons.scss */
+/* line 52, scss/_icons.scss */
 .icon-comment:before {
   content: "\e607";
 }
 
-/* line 50, scss/_icons.scss */
+/* line 55, scss/_icons.scss */
 .icon-paper:before {
   content: "\e608";
 }
 
-/* line 53, scss/_icons.scss */
+/* line 58, scss/_icons.scss */
 .icon-home:before {
   content: "\e609";
 }
 
-/* line 56, scss/_icons.scss */
+/* line 61, scss/_icons.scss */
 .icon-shocked:before {
   content: "\e60a";
 }
@@ -708,19 +713,19 @@ pre .fun {
   /* line 29, scss/_breakpoints.scss */
   h2 {
     font-size: 1.875em;
-    line-height: 1.6em;
+    line-height: 1.2em;
   }
 
   /* line 30, scss/_breakpoints.scss */
   h3 {
     font-size: 1.5em;
-    line-height: 1em;
+    line-height: 1.2em;
   }
 
   /* line 31, scss/_breakpoints.scss */
   h4, #main .post-preview .post-title {
     font-size: 1.125em;
-    line-height: 1em;
+    line-height: 1.2em;
   }
 
   /* line 34, scss/_breakpoints.scss */
@@ -738,13 +743,14 @@ pre .fun {
 
   /* line 49, scss/_breakpoints.scss */
   #container {
+    *zoom: 1;
     max-width: 57em;
     padding-left: 1.5em;
     padding-right: 1.5em;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.0.alpha.16/stylesheets/compass/utilities/general/_clearfix.scss */
   #container:after {
     content: "";
     display: table;
@@ -901,7 +907,7 @@ pre .fun {
 .non-touch #hed .socials a:hover {
   color: #e9633b;
 }
-/* line 12, scss/_non-touch.scss */
+/* line 11, scss/_non-touch.scss */
 .non-touch #main .readmore a:hover,
 .non-touch #main .post-title:hover {
   text-decoration: underline;
@@ -975,8 +981,8 @@ pre .fun {
   display: block;
   width: 100%;
   min-height: 30px;
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 

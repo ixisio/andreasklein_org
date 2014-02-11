@@ -23,6 +23,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  speak: none;
+}
+
 .icon-twitter:before {
   content: "\e600";
 }
