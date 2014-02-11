@@ -5,6 +5,12 @@
 
 ### Release History
 
+**1.0.0**
+* update / migrate poet to v1.0.0-rc4
+* Fix some a11y issues
+* add rss link
+* some minor bugfixes & optimizations
+
 **0.12.0**
 
 * Add a new fresh set of Icons
