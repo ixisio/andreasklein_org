@@ -4,7 +4,8 @@ block content
   - var posts = getPosts(0,5)
   - var page  = 1
   if posts.length >= 1
-    h2.icon-quill.icon Publications
+    h2.icon-quill.icon
+      span Publications
     ul.posts
       each post in posts
         include includes/postSnippet
@@ -12,7 +13,8 @@ block content
     h2 Maintenance Log
     include includes/maintenance
 
-  h2.icon-profile.icon About this Guy
+  h2.icon-profile.icon
+    span About this Guy
   include includes/bio
 
   include includes/pagination
