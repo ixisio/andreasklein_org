@@ -6,13 +6,18 @@ var zlib      = require('zlib'),
     readCSS   = require('./lib/read-css');
 
 function getCssPerView(view, cb) {
-  if (view === 'desktop' || view === 'tablet') {
-    readCSS('www/styles/views/desktop.css', function(css) {
-      cb(css);
-    });
-  } else {
-    cb(false);
-  }
+
+  readCSS('www/styles/main.css', function(maincss) {
+
+    if (view === 'desktop' || view === 'tablet') {
+      readCSS('www/styles/views/desktop.css', function(css) {
+        cb(maincss + css);
+      });
+    } else {
+      cb(maincss);
+    }
+
+  });
 }
 
 // Enable express-device helper
