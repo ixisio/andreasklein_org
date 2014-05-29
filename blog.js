@@ -6,7 +6,7 @@ var express   = require('express'),
     readCSS   = require('./lib/read-css');
 
 function getCssPerView(view, cb) {
-  if (view === 'desktop') {
+  if (view === 'desktop' || view === 'tablet') {
     readCSS('www/styles/views/desktop.css', function(css) {
       cb(css);
     });
