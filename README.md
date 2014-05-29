@@ -43,6 +43,9 @@ Uses [grunt-bump](https://github.com/vojtajina/grunt-bump) task.
 
 ## Release History
 
+**1.1.2 / 30.05.2014**
+* Performance optimization
+
 **1.1.1 / 30.05.2014**
 * Patch: Tablets up to 1024 Pixels has no styling! (fixed)
 

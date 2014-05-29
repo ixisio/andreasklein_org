@@ -1,5 +1,5 @@
-
-var express   = require('express'),
+var zlib      = require('zlib'),
+    express   = require('express'),
     device    = require('express-device'),
     app       = express(),
     Poet      = require('poet'),
@@ -18,8 +18,8 @@ function getCssPerView(view, cb) {
 // Enable express-device helper
 // https://github.com/rguerreiro/express-device
 app.use(device.capture());
+app.use(express.compress());
 app.use(function(req, res, next) {
-
   getCssPerView(req.device.type, function(css) {
     req.css = css;
     next();
@@ -47,22 +47,10 @@ app.use(function(req, res, next) {
 // ---------------------
 
 // Prettify HTML
-app.locals.pretty = true;
-
+//app.locals.pretty = true;
 app.set( 'view engine', 'jade' );
 app.set('view options', { layout: false }); // express-device
 app.set( 'views', __dirname + '/views' );
-
-app.use(express.compress({
-  filter: function(req, res) {
-    return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
-  },
-  // Levels are specified in a range of 0 to 9, where-as 0 is
-  // no compression and 9 is best compression, but slowest
-  level: 9
-}));
-
-
 app.use( express.static( __dirname + '/www' ));
 app.use( app.router );
 
