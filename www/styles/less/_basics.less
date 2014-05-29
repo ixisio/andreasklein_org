@@ -7,15 +7,8 @@
 // -------------------------
 
 p {
-  margin: 0 0 $baseLineHeight / 2;
+  margin: 0 0 @baseLineHeight / 2;
 }
-.lead {
-  margin-bottom: $baseLineHeight;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: $baseLineHeight * 1.5;
-}
-
 
 // Emphasis & misc
 // -------------------------
@@ -24,45 +17,38 @@ small {
   font-size: 85%; // Ex: 14px base font * 85% = about 12px
 }
 strong {
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 1.2em;
 }
 em {
   font-style: italic;
-}
-cite {
-  font-style: normal;
-}
-.muted {
-  color: $grayLight;
 }
 
 
 // Headings
 // -------------------------
 
-h1, h2, h3, h4, h5, h6 {
-  margin: $baseLineHeight 0 ($baseLineHeight / 2) 0;
-  font-family: $headingsFontFamily;
-  font-weight: $headingsFontWeight;
+h1, h2, h3, h4 {
+  margin: @baseLineHeight 0 (@baseLineHeight / 2) 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
   line-height: 1em;
-  color: $headingsColor;
+  color: @headingsColor;
   text-rendering: optimizelegibility;
   // text-transform: uppercase;
   small {
     font-weight: normal;
     line-height: 1;
-    color: $grayLight;
+    color: @grayLight;
   }
   a {
-    color: $headingsColor;
+    color: @headingsColor;
   }
 }
 h1 { font-size: 1.875em; line-height: 1.275em; }
 h2 { font-size: 1.5em; line-height: 1.2em; }
 h3 { font-size: 1.125em; line-height: 1.1em; }
 h4 { font-size: 1em; line-height: 1.25em }
-h5 { font-size: .875em; line-height: 1.25em; }
-h6 { font-size: .75em; line-height: 1.25em; }
 
 .hero {
   font-size: 6em;
@@ -73,9 +59,9 @@ h6 { font-size: .75em; line-height: 1.25em; }
   line-height: 1em;
 }
 h2.sub {
-  color: $grayLight;
+  color: @grayLight;
   font-weight: 100;
-  @extend h6;
+  &:extend(h6);
 }
 h2.icon:before {
   padding-right: 0.5em;
@@ -84,7 +70,7 @@ h2.icon:before {
   margin-top: 50px;
 }
 .content h2 + h3 {
-  margin-top: $baseLineHeight;
+  margin-top: @baseLineHeight;
 }
 
 // Links
@@ -103,7 +89,7 @@ a {
 // Unordered and Ordered lists
 ul, ol {
   padding: 0;
-  margin: 0 0 $baseLineHeight / 2 25px;
+  margin: 0 0 @baseLineHeight / 2 25px;
 }
 ul ul,
 ul ol,
@@ -112,7 +98,7 @@ ol ul {
   margin-bottom: 0;
 }
 li {
-  line-height: $baseLineHeight;
+  line-height: @baseLineHeight;
   margin-bottom: 5px;
 }
 ul.unstyled,
@@ -125,7 +111,6 @@ ol.unstyled {
 // Figures
 // -------------------------
 .content {
-
   figure {
     margin-left: -15%; // ~
     width: 130%; // ~
@@ -137,7 +122,7 @@ ol.unstyled {
   }
 
   figcaption {
-    color: $gray;
+    color: @gray;
     font-size: 0.875em; // 14px
 
     padding: 0 15%;
@@ -145,43 +130,30 @@ ol.unstyled {
   }
 }
 
-
-// MISC
-// ----
-
 // Horizontal rules
-hr, %hr {
-  margin: $baseLineHeight 0;
+hr {
+  margin: @baseLineHeight 0;
   border: 0;
-  border-top: 1px solid $hrBorder;
-  border-bottom: 1px solid $white;
-}
-
-// Abbreviations and acronyms
-abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted $grayLight;
-}
-abbr.initialism {
-  font-size: 90%;
-  text-transform: uppercase;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
 }
 
 // Blockquotes
 blockquote {
   padding: 0 0 0 15px;
   margin: 30px 0;
-  border-left: 5px solid $grayLighter;
+  border-left: 5px solid @grayLighter;
   p {
     opacity: 0.6;
     margin-bottom: 0;
-    @include transition(opacity 440ms ease-in-out);
-    @include font-shorthand(16px, 300 , $baseLineHeight);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: @baseLineHeight;
   }
   small {
     display: block;
-    line-height: $baseLineHeight;
-    color: $grayLight;
+    line-height: @baseLineHeight;
+    color: @grayLight;
     &:before {
       content: '\2014 \00A0';
     }
@@ -192,7 +164,7 @@ blockquote {
     float: right;
     padding-right: 15px;
     padding-left: 0;
-    border-right: 5px solid $grayLighter;
+    border-right: 5px solid @grayLighter;
     border-left: 0;
     p,
     small {
@@ -217,14 +189,5 @@ blockquote:after {
   content: "";
 }
 
-// Addresses
-address {
-  display: block;
-  margin-bottom: $baseLineHeight;
-  font-style: normal;
-  line-height: $baseLineHeight;
-}
-
-
-::-moz-selection { background: $grayDarker; color: $grayLighter; text-shadow: none; }
-::selection { background: $grayDarker; color: $grayLighter; text-shadow: none; }
+::-moz-selection { background: @grayDarker; color: @grayLighter; text-shadow: none; }
+::selection { background: @grayDarker; color: @grayLighter; text-shadow: none; }

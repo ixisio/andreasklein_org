@@ -1,29 +1,19 @@
 /*!
- * andreasklein(dot)org Gruntfile
- * http://andreasklein.org
+ * Gruntfile.js
  * @author Andreas Klein (ixisio)
  */
 
-// Livereload and connect variables
-// --------------------------
-var LIVERELOAD_PORT = 35729,
-    DEV_SERVER_PORT = 3322,
-    lrSnippet = require('connect-livereload')({
-      port: LIVERELOAD_PORT
-    }),
-    mountFolder = function (connect, dir) {
-      return connect.static(require('path').resolve(dir));
-    };
 
-
-module.exports = function( grunt ) {
+module.exports = function(grunt) {
   'use strict';
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.initConfig({
+    globals: {
+      DEV_SERVER_PORT: 3322
+    },
     pkg: grunt.file.readJSON('package.json'),
-
 
     // Project Configuration
     // --------------------------
@@ -41,113 +31,76 @@ module.exports = function( grunt ) {
       all: ['Gruntfile.js', 'www/*.js', 'blog.js'],
       test: ['test/**/*.js']
     },
-
-    compass: {
-      dist: {
+    less: {
+      main: {
         options: {
-          basePath: 'www',
-          require: 'susy',
-          cssDir: 'styles',
-          sassDir: 'styles',
-          imagesDir: 'gfx',
-          fontsDir: 'styles/fonts',
-          javascriptsDir: 'scripts',
-          force: true,
-          outputStyle: 'expanded'
-        }
-      }
-    },
-
-    // Server/Watch/Connect-Livereload Configuration
-    // --------------------------
-    watch: {
-      src: {
-        files: ['www/**/*.js', 'www/**/*.scss', '!www/scripts/vendor/*.js'],
-        tasks: ['assets']
-      },
-      livereload: {
-        options: {
-          livereload: LIVERELOAD_PORT
+          compress: false,
+          report: false, // 'min'
+          dumpLineNumbers: 'comments'
         },
-        files: [
-          'views/*.md',
-          'content/**/*.jade',
-          'www/{,*/}*.{md,png,jpg,jpeg,gif,webp,svg}'
-        ],
-        tasks: ['assets']
-      }
-    },
-
-    connect: {
-      options: {
-        port: DEV_SERVER_PORT,
-        hostname: 'localhost'
-      },
-      livereload: {
-        options: {
-          middleware: function (connect) {
-            return [lrSnippet, mountFolder(connect, '.')];
-          }
+        files: {
+          'www/styles/main.css': 'www/styles/less/main.less',
+          'www/styles/views/desktop.css': 'www/styles/less/views/desktop.less'
         }
       }
     },
-
-
+    autoprefixer: {
+        options: {
+          browsers: ['last 1 version'],
+          report: 'min'
+        },
+        css: {
+          src: ['www/styles/**/*.css']
+        }
+    },
+    watch: {
+      less: {
+        files: ['www/styles/**/*.less'],
+        tasks: ['less', 'autoprefixer']
+      }
+    },
     open: {
       server: {
-        path: 'http://localhost:<%= connect.options.port %>'
+        path: 'http://localhost:<%= globals.DEV_SERVER_PORT %>'
       }
     },
 
-
-
-    // Build Configuration
+    // Prod-Build Config
     // --------------------------
     cssmin: {
       options: {
-        banner: '/*! Stylsheets <%= pkg.name %> - v<%= pkg.version %> - ' +
-          '<%= grunt.template.today("yyyy-mm-dd") %> - <%= pkg.author.url %> */'
+        // banner: '/*! Stylsheets <%= pkg.name %> - v<%= pkg.version %> - ' +
+        //   '<%= grunt.template.today("yyyy-mm-dd") %> - <%= pkg.author.url %> */',
+        report: 'min'
       },
       dist: {
-        files: {
-          'www/styles/main.css': ['www/styles/*.css']
-        }
+        expand: true,
+        cwd: 'www/styles/',
+        src: ['**/*.css'],
+        dest: 'www/styles/'
       }
-    },
-
-    concat: {
-      dist: ''
-    },
-
-    min: {
-      dist: ''
     }
   });
 
 
-  // Load Tasks from node_modules (npmTasks) dynamically
-  // --------------------------
-  grunt.loadNpmTasks('connect-livereload');
-
-
   // Register Tasks
-  // (1) build: Build for Prod enviroment
-  // (2) assets : Lint & build static assets like (SASS Files)
-  // (2) s (server)
-  // (3) default (run `server` task)
+  // (1) 'prod': Build for Prod enviroment
+  // (2) 'assets' : Lint & build static assets like (SASS Files)
+  // (3) 'dev' Development Workflow
+  // (4) default (run `dev` task)
   // --------------------------
-  grunt.registerTask('build', [
+  grunt.registerTask('prod', [
     'jshint:all',
-    'compass',
+    'less',
+    'autoprefixer',
     'cssmin'
   ]);
-
   grunt.registerTask('assets', [
     'jshint:all',
-    'compass'
+    'less',
+    'autoprefixer'
   ]);
-
-  grunt.registerTask('s', function() {
+  grunt.registerTask('dev', function() {
     // Run node as child process
     grunt.util.spawn({
       cmd: 'node',
@@ -155,11 +108,8 @@ module.exports = function( grunt ) {
     });
 
     grunt.task.run('assets');
-    // grunt.task.run('connect:livereload');
     grunt.task.run('open');
-    grunt.task.run('watch:src');
+    grunt.task.run('watch');
   });
-
-  grunt.registerTask('default', ['s']);
-
+  grunt.registerTask('default', ['dev']);
 };

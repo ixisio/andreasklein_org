@@ -4,7 +4,6 @@ meta(name="viewport", content="width=device-width, minimum-scale=1.0,maximum-sca
 
 - if (typeof post !== "undefined" && post.title !== "undefined")
   title= post.title + ", by Andreas Klein"
-  meta(name='description', content=post.description)
 - else if (typeof tag !== "undefined")
   title= tag + ", Andreas Klein"
 - else if (typeof category !== "undefined")
@@ -14,9 +13,17 @@ meta(name="viewport", content="width=device-width, minimum-scale=1.0,maximum-sca
 - else
   title= 'Frontend developers Blog by Andreas Klein'
 
-meta(name="description", content="I am a freelance developer, heavy Espresso drinker, JavaScript pirat, freestyle Skater & Longboarder. Cologne / Germany")
-link(rel="alternate", type="application/rss+xml", title="RSS", href="http://andreasklein.org/rss")
+meta(name="author", content="Andreas Klein")
+meta(name="description", content="Freelance Web-Developer and Consultant based in Cologne / Germany. I'm specializing  ")
+
+link(rel="alternate", type="application/rss+xml", title="Andreas Klein", href="http://andreasklein.org/rss")
 link(rel="shortcut icon", href="/favicon.ico")
 link(rel="apple-touch-icon", href="/apple-touch-icon.png")
-link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:300")
+
+script
+  if (!("ontouchstart" in window || navigator.msMaxTouchPoints)) document.documentElement.className += ' non-touch';
 link(rel='stylesheet', href='/styles/main.css')
+
+- if (css)
+  style
+    !{css}

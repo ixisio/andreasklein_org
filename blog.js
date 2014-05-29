@@ -1,7 +1,30 @@
 
 var express   = require('express'),
+    device    = require('express-device'),
     app       = express(),
-    Poet      = require('poet');
+    Poet      = require('poet'),
+    readCSS   = require('./lib/read-css');
+
+function getCssPerView(view, cb) {
+  if (view === 'desktop') {
+    readCSS('www/styles/views/desktop.css', function(css) {
+      cb(css);
+    });
+  } else {
+    cb(false);
+  }
+}
+
+// Enable express-device helper
+// https://github.com/rguerreiro/express-device
+app.use(device.capture());
+app.use(function(req, res, next) {
+
+  getCssPerView(req.device.type, function(css) {
+    req.css = css;
+    next();
+  });
+});
 
 // Instantiate and hook Poet into express;
 // ---------------------
@@ -19,10 +42,27 @@ var express   = require('express'),
   }
 });
 
+
 // Express Config
 // ---------------------
+
+// Prettify HTML
+app.locals.pretty = true;
+
 app.set( 'view engine', 'jade' );
+app.set('view options', { layout: false }); // express-device
 app.set( 'views', __dirname + '/views' );
+
+app.use(express.compress({
+  filter: function(req, res) {
+    return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
+  },
+  // Levels are specified in a range of 0 to 9, where-as 0 is
+  // no compression and 9 is best compression, but slowest
+  level: 9
+}));
+
+
 app.use( express.static( __dirname + '/www' ));
 app.use( app.router );
 
@@ -36,14 +76,21 @@ poet.init().then(function () {
 
 // Poet Routes
 // ---------------------
-poet.addRoute( '/articles/:article', function ( req, res ) {
+poet.addRoute( '/articles/:post', function ( req, res ) {
   var post = poet.helpers.getPost( req.params.post );
+
   if ( post ) {
-    res.render( 'post', { post: post });
+    res.render( 'post', {
+      post: post,
+      device: req.device,
+      css: req.css
+    });
   } else {
     res.status(404);
     res.render('4o4.jade', {
-      url: req.url
+      url: req.url,
+      device: req.device,
+      css: req.css
     });
   }
 });
@@ -53,7 +100,9 @@ poet.addRoute( '/tag/:tag', function ( req, res ) {
   if ( taggedPosts.length ) {
     res.render( 'tag', {
       posts : taggedPosts,
-      tag : req.params.tag
+      tag : req.params.tag,
+      device: req.device,
+      css: req.css
     });
   }
 });
@@ -61,22 +110,37 @@ poet.addRoute( '/tag/:tag', function ( req, res ) {
 
 // Static Routes
 // ----------------
-app.get('/imprint', function ( req, res ) {
-  res.render( 'page-imprint', {title: 'Imprint'} );
+app.get('/legal', function ( req, res ) {
+  res.render( 'page-legal', {
+    title: 'Imprint',
+    device: req.device,
+    css: req.css
+  });
 });
 
 app.get('/rss', function (req, res) {
   var posts = poet.helpers.getPosts(0, 5);
   res.setHeader('Content-Type', 'application/rss+xml');
-  res.render('rss', { posts: posts });
+  res.render('rss', {
+    posts: posts,
+    device: req.device,
+    css: req.css
+  });
 });
 
-app.get( '/', function ( req, res ) { res.render( 'index' ); });
+app.get( '/', function ( req, res ) {
+  res.render( 'index', {
+    device: req.device,
+    css: req.css
+  });
+});
 
 app.use(function(req, res) {
   res.status(404);
   res.render('4o4.jade', {
-    url: req.url
+    url: req.url,
+    device: req.device,
+    css: req.css
   });
 });
 
