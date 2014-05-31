@@ -26,7 +26,7 @@ How to solve this? Is it possible to solve it with the current tools/technics? B
 The browser is the only *Player of the Game* that knows exactly all parameters of the device, the OS, the actual bandwidth, and so on... everything!
 
 <figure>
-  <img src="http://www.andreasklein.org/gfx/this-will-be-the-web.png" alt="This will be the Web, Brad Frost">
+  <img src="/gfx/this-will-be-the-web.png" alt="This will be the Web, Brad Frost">
   <figcaption>
     "This will be the Web", <a href="https://twitter.com/brad_frost">@brad_frost</a>
   </figcaption>

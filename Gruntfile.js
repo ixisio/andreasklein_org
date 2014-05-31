@@ -28,7 +28,7 @@ module.exports = function(grunt) {
         }
       },
       gruntfile: ['Gruntfile.js'],
-      all: ['Gruntfile.js', 'www/*.js', 'blog.js'],
+      all: ['Gruntfile.js', 'www/*.js', 'index.js'],
       test: ['test/**/*.js']
     },
     less: {
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
     // Run node as child process
     grunt.util.spawn({
       cmd: 'node',
-      args: ['blog.js']
+      args: ['index.js']
     });
 
     grunt.task.run('assets');

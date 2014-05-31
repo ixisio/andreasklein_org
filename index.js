@@ -128,6 +128,13 @@ app.get( '/', function ( req, res ) {
   });
 });
 
+app.get( '/about', function ( req, res ) {
+  res.render( 'page-about', {
+    title: 'About me',
+    device: req.device,
+    css: req.css
+  });
+});
 app.use(function(req, res) {
   res.status(404);
   res.render('4o4.jade', {
