@@ -1,5 +1,6 @@
 header#hed
-  a(id="face", href="#{typeof title !== 'undefined' && title === 'About me' ?  '/' : '/about'}", title="#{typeof title !== 'undefined' && title === 'About me' ? 'View Startpage': 'About me' }")
+  // a(id="face", href="#{typeof title !== 'undefined' && title === 'About me' ?  '/' : '/about'}", title="#{typeof title !== 'undefined' && title === 'About me' ? 'View Startpage': 'About me' }")
+  a(id="face", href="/", title="View Startpage")
     - if(device.type === 'phone' || typeof post !== 'undefined')
       img(src="/gfx/avatar-45x45.jpg", width="45px", height="45px", alt="Andreas Klein")
     - else

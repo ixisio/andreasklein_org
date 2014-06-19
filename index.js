@@ -1,35 +1,13 @@
-var zlib      = require('zlib'),
-    express   = require('express'),
+var express   = require('express'),
     device    = require('express-device'),
     app       = express(),
-    Poet      = require('poet'),
-    readCSS   = require('./lib/read-css');
-
-function getCssPerView(view, cb) {
-
-  readCSS('www/styles/main.css', function(maincss) {
-
-    if (view === 'desktop' || view === 'tablet') {
-      readCSS('www/styles/views/desktop.css', function(css) {
-        cb(maincss + css);
-      });
-    } else {
-      cb(maincss);
-    }
-
-  });
-}
+    Poet      = require('poet');
 
 // Enable express-device helper
 // https://github.com/rguerreiro/express-device
+// ---------------------
 app.use(device.capture());
 app.use(express.compress());
-app.use(function(req, res, next) {
-  getCssPerView(req.device.type, function(css) {
-    req.css = css;
-    next();
-  });
-});
 
 // Instantiate and hook Poet into express;
 // ---------------------
@@ -52,12 +30,12 @@ app.use(function(req, res, next) {
 // ---------------------
 
 // Prettify HTML
-//app.locals.pretty = true;
-app.set( 'view engine', 'jade' );
+app.set('view engine', 'jade' );
 app.set('view options', { layout: false }); // express-device
-app.set( 'views', __dirname + '/views' );
-app.use( express.static( __dirname + '/www' ));
-app.use( app.router );
+app.set('views', __dirname + '/views' );
+app.use(express.compress());
+app.use(express.static( __dirname + '/www' ), { maxAge: 31557600000 });
+app.use(app.router );
 
 
 // Poet Init
@@ -75,14 +53,14 @@ poet.addRoute( '/articles/:post', function ( req, res ) {
   if ( post ) {
     res.render( 'post', {
       post: post,
-      device: req.device,
+      device: req.device.type,
       css: req.css
     });
   } else {
     res.status(404);
     res.render('4o4.jade', {
       url: req.url,
-      device: req.device,
+      device: req.device.type,
       css: req.css
     });
   }
@@ -94,7 +72,7 @@ poet.addRoute( '/tag/:tag', function ( req, res ) {
     res.render( 'tag', {
       posts : taggedPosts,
       tag : req.params.tag,
-      device: req.device,
+      device: req.device.type,
       css: req.css
     });
   }
@@ -106,7 +84,7 @@ poet.addRoute( '/tag/:tag', function ( req, res ) {
 app.get('/legal', function ( req, res ) {
   res.render( 'page-legal', {
     title: 'Imprint',
-    device: req.device,
+    device: req.device.type,
     css: req.css
   });
 });
@@ -116,30 +94,32 @@ app.get('/rss', function (req, res) {
   res.setHeader('Content-Type', 'application/rss+xml');
   res.render('rss', {
     posts: posts,
-    device: req.device,
+    device: req.device.type,
     css: req.css
   });
 });
 
 app.get( '/', function ( req, res ) {
+  console.log( req.device.type);
+
   res.render( 'index', {
-    device: req.device,
+    device: req.device.type,
     css: req.css
   });
 });
 
-app.get( '/about', function ( req, res ) {
-  res.render( 'page-about', {
-    title: 'About me',
-    device: req.device,
-    css: req.css
-  });
-});
+// app.get( '/about', function ( req, res ) {
+//   res.render( 'page-about', {
+//     title: 'About me',
+//     device: req.device.type,
+//     css: req.css
+//   });
+// });
 app.use(function(req, res) {
   res.status(404);
   res.render('4o4.jade', {
     url: req.url,
-    device: req.device,
+    device: req.device.type,
     css: req.css
   });
 });

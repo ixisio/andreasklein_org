@@ -100,13 +100,15 @@ module.exports = function(grunt) {
     'less',
     'autoprefixer'
   ]);
-  grunt.registerTask('dev', function() {
+  grunt.registerTask('node-server', function() {
     // Run node as child process
     grunt.util.spawn({
       cmd: 'node',
       args: ['index.js']
     });
-
+  });
+  grunt.registerTask('dev', function() {
+    grunt.task.run('node-server');
     grunt.task.run('assets');
     grunt.task.run('open');
     grunt.task.run('watch');

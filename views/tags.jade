@@ -4,4 +4,5 @@ extends layout
   ul
     - each tag in tagList
       li
-        a(href=tagUrl(tag)) #{tag}
+        a(href=tagUrl(tag)) #
+          = tag
