@@ -4,3 +4,5 @@ temp
 /dist
 .sass-cache
 *.idea
+*.sublime-project
+*.sublime-workspace
