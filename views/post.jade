@@ -18,12 +18,8 @@ block content
         i written on #{post.dateText}
       if(post.tags.length)
         span.tags#tags
-          i &nbsp;and filed under
           ul
-            - var i = 0;
             - each tag in post.tags
-              - i++;
               li
-                a.label.label-info(href=tagUrl(tag))
+                a.label.label-info(href=tagUrl(tag)) #
                   = tag
-                if i !== post.tags.length
