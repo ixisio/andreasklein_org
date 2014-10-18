@@ -7,16 +7,15 @@
     "url": "http://andreasklein.org"
   },
   "license": "MIT",
-  "main": "blog",
+  "main": "index",
   "repository": {
     "type": "git",
     "url": "http://github.com/ixisio/andreasklein_org"
   },
   "dependencies": {
-    "express": ">=4.9.5..",
+    "express": ">=4.9.8",
     "jade": "~1.7.0",
-    "poet": "~2.0.0",
-    "underscore": "~1.7.0"
+    "poet": "~2.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -25,7 +24,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-less": "~0.11.4",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-jscs": "^0.7.1",
+    "grunt-jscs": "^0.8.0",
     "grunt-open": "^0.2.3",
     "matchdep": "^0.3.0"
   },

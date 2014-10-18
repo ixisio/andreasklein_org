@@ -4,6 +4,15 @@
 * Update npm dependencies to latest version
 * Add JavaScript Code Style Checker (JSCS)
 * Refactor Code Style
+* Clean up some less styles indentation
+* Add social profile link rel to <head>
+* Add indieweb Authorization endpoints
+* Remove express-device
+* Rename main to core.css
+* Remove mobile avatar image
+* Remove Open-Sanse true-type font format
+* Remove icons eot format and remove .eot file
+* Remove underscore.js from npm depedencies
 
 ## 1.2.0 / 19.06.2014
 * Performance optimization
