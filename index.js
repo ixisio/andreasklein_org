@@ -26,9 +26,7 @@ var express = require('express'),
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
 app.set('views', __dirname + '/views');
-app.use(express.compress());
-app.use(express.static(__dirname + '/www'), { maxAge: 31557600000 });
-app.use(app.router);
+app.use(express.static(__dirname + '/www'));
 
 /**
  * Initialize poet and clear poet cache

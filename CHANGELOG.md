@@ -13,6 +13,9 @@
 * Remove Open-Sanse true-type font format
 * Remove icons eot format and remove .eot file
 * Remove underscore.js from npm depedencies
+* Migrate jade to v1.7.x
+* Migrate express to v4.x
+* Remove mobile stylesheet and text-image-block elements
 
 ## 1.2.0 / 19.06.2014
 * Performance optimization

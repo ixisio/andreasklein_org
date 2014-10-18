@@ -34,13 +34,16 @@ Yeah, this logging entry is very self-explaning. I did some research finding oth
 
 > Decision: I will use a serverside javascript environment (Node.js & [express](http://expressjs.com/)) to create this blog logic. I want write my articles in Markdown! I found this: [Poet](http://jsantell.github.com/poet/), looks interesting to me.
 
-<div class="text-image-block">
-	<figure class="pull-right">
-		<img src="/gfx/poet.png">
-	</figure>
+<figure>
+  <img src="/gfx/poet.png" alt="Poet.js, by @jsantell">
+  <figcaption>
+    "Poet is a blog generator in node.js to generate routing, render markdown/jade/whatever posts, and get a blog up and running fast", by <a href="https://twitter.com/jsantell">@jsantell</a>
+  </figcaption>
+</figure>
+
 
 Node.js is a very new and interesting serverside javascript environment. The non-blocking I/O event handling makes it very powerful and scalable, also it's pleasant to write javascript at both backend and frontend. I like the concept of writing my articles in clean markdown, store it on github and parse via Node.js. The simple blogging system Poet fulfils all of this requirements.
-</div>
+
 
 - It's well [documented](http://jsantell.github.io/poet/).
 - It supports Markdown, Yeah ;-)
