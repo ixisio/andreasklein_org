@@ -40,8 +40,7 @@ module.exports = function (grunt) {
                 dumpLineNumbers: 'comments'
             },
             files: {
-                'www/styles/main.css': 'www/styles/less/main.less',
-                'www/styles/views/desktop.css': 'www/styles/less/views/desktop.less'
+                'www/styles/core.css': 'www/styles/less/core.less'
             }
         }
     },

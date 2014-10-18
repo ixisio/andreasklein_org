@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "express": ">=4.9.5..",
-    "express-device": "^0.3.11",
     "jade": "~1.7.0",
     "poet": "~2.0.0",
     "underscore": "~1.7.0"

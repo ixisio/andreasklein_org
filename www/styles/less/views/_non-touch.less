@@ -1,21 +1,28 @@
-@import "../__globals";
-
 
 // A Touch-First Approach
 .non-touch {
 
-  // Hover States
-	a:hover { text-decoration: none; }
-	blockquote:hover p { opacity: 1; }
-	#hed .socials a:hover {color: @linkColorHover;}
-  #main {
-    .readmore a:hover,
-    .post-title:hover {
-      text-decoration: underline;
+    // Hover States
+    a:hover {
+        text-decoration: none;
     }
-  }
 
-  #hed .socials a {
-    padding-right: 10px;
-  }
+    blockquote:hover p {
+        opacity: 1;
+    }
+
+    #hed .socials a {
+        padding-right: 10px;
+
+        &:hover {
+            color: @linkColorHover;
+        }
+    }
+
+    #main {
+        .readmore a:hover,
+        .post-title:hover {
+            text-decoration: underline;
+        }
+    }
 }

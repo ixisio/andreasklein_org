@@ -32,7 +32,4 @@ link(link rel="micropub", href="https://andreasklein.org/micropub")
 script
   if (!("ontouchstart" in window || navigator.msMaxTouchPoints)) document.documentElement.className += ' non-touch';
 
-link(rel='stylesheet', href='/styles/main.css')
-
-if (device === 'desktop' || device === 'tablet')
-  link(rel='stylesheet', href="/styles/views/desktop.css")
+link(rel='stylesheet', href='/styles/core.css')

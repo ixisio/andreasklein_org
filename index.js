@@ -1,14 +1,6 @@
 var express = require('express'),
-    device = require('express-device'),
     app = express(),
     Poet = require('poet');
-
-/**
- * Enable express-device helper
- * https://github.com/rguerreiro/express-device
- */
-app.use(device.capture());
-app.use(express.compress());
 
 /**
  * Instantiate and hook Poet into Express.js
@@ -29,7 +21,7 @@ app.use(express.compress());
 });
 
 /**
- * Configure Express.js and express-device
+ * Configure Express.js
  */
 app.set('view engine', 'jade');
 app.set('view options', { layout: false });
@@ -60,14 +52,12 @@ poet.addRoute('/articles/:post', function (req, res) {
   if (post) {
       res.render('post', {
           post: post,
-          device: req.device.type,
           css: req.css
       });
   } else {
       res.status(404);
       res.render('4o4.jade', {
           url: req.url,
-          device: req.device.type,
           css: req.css
       });
   }
@@ -87,7 +77,6 @@ poet.addRoute('/tag/:tag', function (req, res) {
         res.render('tag', {
             posts: taggedPosts,
             tag: req.params.tag,
-            device: req.device.type,
             css: req.css
         });
     }
@@ -103,7 +92,6 @@ poet.addRoute('/tag/:tag', function (req, res) {
 app.get('/legal', function (req, res) {
     res.render('page-legal', {
         title: 'Imprint',
-        device: req.device.type,
         css: req.css
     });
 });
@@ -121,7 +109,6 @@ app.get('/rss', function (req, res) {
     res.setHeader('Content-Type', 'application/rss+xml');
     res.render('rss', {
         posts: posts,
-        device: req.device.type,
         css: req.css
     });
 });
@@ -135,7 +122,6 @@ app.get('/rss', function (req, res) {
  */
 app.get('/', function (req, res) {
     res.render('index', {
-        device: req.device.type,
         css: req.css
     });
 });
@@ -150,7 +136,6 @@ app.get('/', function (req, res) {
 // app.get( '/about', function (req, res) {
 //   res.render( 'page-about', {
 //     title: 'About me',
-//     device: req.device.type,
 //     css: req.css
 //   });
 // });
@@ -167,7 +152,6 @@ app.use(function (req, res) {
     res.status(404);
     res.render('4o4.jade', {
         url: req.url,
-        device: req.device.type,
         css: req.css
     });
 });
