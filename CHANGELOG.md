@@ -1,6 +1,7 @@
 # Changelog
 
 ## HEAD
+* Move contents directory to separate git repo and fetch it as git-submodule: https://github.com/ixisio/andreasklein_org-contents
 * Update npm dependencies to latest version
 * Add JavaScript Code Style Checker (JSCS)
 * Refactor Code Style
