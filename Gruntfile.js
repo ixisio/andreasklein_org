@@ -13,6 +13,8 @@ module.exports = function (grunt) {
     globals: {
         DEV_SERVER_PORT: 3322
     },
+    banner: '/*! <%= pkg.name %> - v<%= pkg.version %>- ' +
+            '<%= grunt.template.today("yyyy-mm-dd") %> */',
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
         options: {
@@ -37,7 +39,8 @@ module.exports = function (grunt) {
             options: {
                 compress: false,
                 report: false,
-                dumpLineNumbers: 'comments'
+                dumpLineNumbers: 'comments',
+                banner: '<%= banner %>'
             },
             files: {
                 'www/styles/core.css': 'www/styles/less/core.less'

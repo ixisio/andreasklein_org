@@ -1,6 +1,7 @@
 # Changelog
 
 ## HEAD
+* Add banner option for CSS files to grunt-contrib-less
 
 ## v1.3.0 / 2014-10-20
 * Move contents directory to separate git repo and fetch it as git-submodule: https://github.com/ixisio/andreasklein_org-contents
