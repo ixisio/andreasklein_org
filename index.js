@@ -1,13 +1,27 @@
 var express = require('express'),
     app = express(),
-    Poet = require('poet');
+    Poet = require('poet')
+
+
+/**
+ * Markdown
+ */
+var markdown = require( "markdown" ).markdown;
+var fs = require('fs');
+var articleFilePath = './content/posts/comments-system.md';
+
+fs.readFile(articleFilePath, 'UTF-8', function(err, data) {
+    console.log( markdown.toHTML( data) );
+});
+
+//
 
 /**
  * Instantiate and hook Poet into Express.js
  */
- var poet = Poet(app, {
+var poet = Poet(app, {
     postsPerPage: 10,
-    posts: './content/',
+    posts: './content/posts/',
     metaFormat: 'json',
     readMoreLink: function (post) {
        var anchor = '<a href="' + post.url + '" title="Read more of ' + post.title + '">&rsaquo; read more</a>';
