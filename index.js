@@ -7,7 +7,7 @@ var express = require('express'),
  */
  var poet = Poet(app, {
     postsPerPage: 10,
-    posts: './content/',
+    posts: './content/posts/',
     metaFormat: 'json',
     readMoreLink: function (post) {
        var anchor = '<a href="' + post.url + '" title="Read more of ' + post.title + '">&rsaquo; read more</a>';
