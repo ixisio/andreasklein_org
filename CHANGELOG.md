@@ -2,6 +2,7 @@
 
 ## HEAD
 * Add banner option for CSS files to grunt-contrib-less
+* Write post meta information in yaml instead json
 
 ## v1.3.0 / 2014-10-20
 * Move contents directory to separate git repo and fetch it as git-submodule: https://github.com/ixisio/andreasklein_org-contents

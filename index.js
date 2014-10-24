@@ -8,7 +8,8 @@ var express = require('express'),
  var poet = Poet(app, {
     postsPerPage: 10,
     posts: './content/posts/',
-    metaFormat: 'json',
+    notes: './content/notes/',
+    metaFormat: 'yaml',
     readMoreLink: function (post) {
        var anchor = '<a href="' + post.url + '" title="Read more of ' + post.title + '">&rsaquo; read more</a>';
 
@@ -16,6 +17,7 @@ var express = require('express'),
     },
     routes: {
         '/articles/:post': 'post',
+        '/notes/:note': 'note',
         '/tags/:tag': 'tag'
     }
 });
@@ -38,7 +40,7 @@ poet.init().then(function () {
 });
 
 /**
- * Route Tags | Render article page if exists, otherwise 404
+ * Route Posts | Render article page if exists, otherwise 404
  *
  * @param  {Object} req Poet request parameter
  * @param  {Object} res Poet response parameter
@@ -62,6 +64,28 @@ poet.addRoute('/articles/:post', function (req, res) {
 });
 
 /**
+ * Route Note | Render note page if exists, otherwise 404
+ *
+ * @param  {Object} req Poet request parameter
+ * @param  {Object} res Poet response parameter
+ * @return {void}
+ */
+poet.addRoute('/notes/:note', function (req, res) {
+  var note = poet.helpers.getPost(req.params.post);
+
+  if (post) {
+      res.render('post', {
+          post: post
+      });
+  } else {
+      res.status(404);
+      res.render('4o4.jade', {
+          url: req.url
+      });
+  }
+});
+
+/**
  * Route Tags | Render page with tagged posts
  *
  * @param  {Object} req Poet request parameter
@@ -74,8 +98,7 @@ poet.addRoute('/tag/:tag', function (req, res) {
     if (taggedPosts.length) {
         res.render('tag', {
             posts: taggedPosts,
-            tag: req.params.tag,
-            css: req.css
+            tag: req.params.tag
         });
     }
 });
@@ -89,8 +112,7 @@ poet.addRoute('/tag/:tag', function (req, res) {
  */
 app.get('/legal', function (req, res) {
     res.render('page-legal', {
-        title: 'Imprint',
-        css: req.css
+        title: 'Imprint'
     });
 });
 
@@ -106,8 +128,7 @@ app.get('/rss', function (req, res) {
 
     res.setHeader('Content-Type', 'application/rss+xml');
     res.render('rss', {
-        posts: posts,
-        css: req.css
+        posts: posts
     });
 });
 
@@ -119,13 +140,13 @@ app.get('/rss', function (req, res) {
  * @return {void}
  */
 app.get('/', function (req, res) {
-    res.render('index', {
-        css: req.css
-    });
+    res.render('index');
 });
 
 /**
  * Route About
+ *
+ * CURRENTLY NOT YET ENABLED !!
  *
  * @param  {Object} req   Express request parameter
  * @param  {Object} res   Express response parameter
@@ -149,8 +170,7 @@ app.get('/', function (req, res) {
 app.use(function (req, res) {
     res.status(404);
     res.render('4o4.jade', {
-        url: req.url,
-        css: req.css
+        url: req.url
     });
 });
 
