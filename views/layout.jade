@@ -4,10 +4,10 @@ html(lang="en", class="#{typeof post !== 'undefined' ? 'type-article' : 'type-ov
   head
     include includes/head
   body
-    #container
+    .container
       include includes/header
 
-      #main(role="main")
+      .main__container(role="main")
         block content
 
       include includes/footer

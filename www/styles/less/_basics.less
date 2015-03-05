@@ -7,7 +7,7 @@
 // -------------------------
 
 p {
-  margin: 0 0 @baseLineHeight / 2;
+  margin-bottom: .5rem;
 }
 
 // Emphasis & misc
@@ -18,7 +18,7 @@ small {
 }
 strong {
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 em {
   font-style: italic;
@@ -29,7 +29,7 @@ em {
 // -------------------------
 
 h1, h2, h3, h4 {
-  margin: @baseLineHeight 0 (@baseLineHeight / 2) 0;
+  margin: 2.5rem 0 1rem;
   font-family: @headingsFontFamily;
   font-weight: @headingsFontWeight;
   line-height: 1em;
@@ -45,32 +45,37 @@ h1, h2, h3, h4 {
     color: @headingsColor;
   }
 }
-h1 { font-size: 1.875em; line-height: 1.275em; }
-h2 { font-size: 1.5em; line-height: 1.2em; }
-h3 { font-size: 1.125em; line-height: 1.1em; }
-h4 { font-size: 1em; line-height: 1.25em }
+h1 { font-size: 1.875rem; line-height: 1.275; }
+h2 { font-size: 1.5rem; line-height: 1.2; }
+h3 { font-size: 1.125rem; line-height: 1.1; }
+h4 { font-size: 1rem; line-height: 1.25; }
 
 .hero {
-  font-size: 6em;
-  line-height: 1em;
+  font-size: 6rem;
+  line-height: 1;
 }
+
 .fat {
-  font-size: 2.4em;
+  font-size: 2.4rem;
   line-height: 1em;
 }
-h2.sub {
+
+h2.subheadline {
   color: @grayLight;
   font-weight: 100;
   &:extend(h6);
 }
+
 h2.icon:before {
   padding-right: 0.5em;
 }
+
 .content h2, .content h3 {
-  margin-top: 50px;
+  margin-top: 2.5rem;
 }
+
 .content h2 + h3 {
-  margin-top: @baseLineHeight;
+  margin-top: 0;
 }
 
 // Links
@@ -79,6 +84,7 @@ h2.icon:before {
 a {
   color: inherit;
   text-decoration: underline;
+  text-decoration-color: @grayLight;
   font-weight: 100;
 }
 
@@ -89,7 +95,7 @@ a {
 // Unordered and Ordered lists
 ul, ol {
   padding: 0;
-  margin: 0 0 @baseLineHeight / 2 25px;
+  margin: 0 0 1rem 25px;
 }
 ul ul,
 ul ol,
@@ -98,7 +104,6 @@ ol ul {
   margin-bottom: 0;
 }
 li {
-  line-height: @baseLineHeight;
   margin-bottom: 5px;
 }
 ul.unstyled,
@@ -132,7 +137,7 @@ ol.unstyled {
 
 // Horizontal rules
 hr {
-  margin: @baseLineHeight 0;
+  margin: 1rem 0;
   border: 0;
   border-top: 1px solid @hrBorder;
   border-bottom: 1px solid @white;
@@ -140,20 +145,21 @@ hr {
 
 // Blockquotes
 blockquote {
-  padding: 0 0 0 15px;
-  margin: 30px 0;
+  padding: 0 0 0 1rem;
+  margin: 2rem 0;
   border-left: 5px solid @grayLighter;
+
   p {
     opacity: 0.6;
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
-    line-height: @baseLineHeight;
   }
+
   small {
     display: block;
-    line-height: @baseLineHeight;
     color: @grayLight;
+
     &:before {
       content: '\2014 \00A0';
     }
@@ -162,14 +168,16 @@ blockquote {
   // Float right with text-align: right
   &.pull-right {
     float: right;
-    padding-right: 15px;
+    padding-right: 1rem;
     padding-left: 0;
     border-right: 5px solid @grayLighter;
     border-left: 0;
+
     p,
     small {
       text-align: right;
     }
+
     small {
       &:before {
         content: '';

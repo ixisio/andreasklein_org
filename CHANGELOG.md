@@ -1,6 +1,13 @@
 # Changelog
 
 ## HEAD
+
+## v1.3.1 / 2015-03-05
+* Remove CSS IDs and replace with classes
+* Some minor CSS Refactoring
+* Move to REMs instead of EMs
+* Update Copyright date to 2015
+* Update meta title
 * Add banner option for CSS files to grunt-contrib-less
 
 ## v1.3.0 / 2014-10-20

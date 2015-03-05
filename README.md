@@ -40,4 +40,4 @@ Uses [grunt-bump](https://github.com/vojtajina/grunt-bump) task.
 * `$ grunt bump:major` // 0.x to 1.0.0
 * `$ grunt bump:build` // 1.0.0 to 1.0.0-1
 
-&copy; 2014 Andreas Klein
+&copy; 2015 Andreas Klein

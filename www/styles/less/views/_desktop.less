@@ -2,15 +2,14 @@
 
     body {
         font-size: @baseFontSize-desktop;
-        line-height: @baseLineHeight-desktop;
     }
 
-    h1 { font-size: 2.25em; line-height: 1.2em; }
-    h2 { font-size: 1.875em; line-height: 1.2em; }
-    h3 { font-size: 1.5em; line-height: 1.2em; }
-    h4 { font-size: 1.125em; line-height: 1.2em; }
+    h1 { font-size: 3rem; line-height: 1.2; }
+    h2 { font-size: 2rem; line-height: 1.2; }
+    h3 { font-size: 1.5rem; line-height: 1.2; }
+    h4 { font-size: 1.4rem; line-height: 1; }
 
-    #main {
+    .main__container {
         h1, > h2 {
             margin: 40px -30px 30px -30px;
             padding: 15px 30px 15px 23px;
@@ -26,36 +25,42 @@
 
     // LAYOUT
     // -------------------
-    #container {
+    .container {
         max-width: 57em;
     }
 
-    #foot {
+    .footer {
+        .column(6);
+
         text-align: left;
-        font-size: 0.625em;
-        line-height: 20px;
+        font-size: .75rem;
     }
 
     .type-overview {
 
-        #container {
-            margin-top: 5em;
+        .container {
+            margin-top: 5rem;
         }
 
-        #hed {
+        .header {
           .column(2);
 
-            h2.sub {
-                font-size: 0.6em;
+            .subheadline {
+                font-size: 0.75rem;
             }
         }
-        #main {
+
+        .header__logo img {
+            max-width: none;
+        }
+
+        .main__container {
             .column(4);
         }
     }
 
     .type-article {
-        #hed {
+        .header {
             .column(2);
             .pull(4);
 
@@ -71,26 +76,21 @@
                 margin-top: 10px;
             }
 
-            h2.sub {
-                font-size: 0.6em;
-            }
-
-            .socials {
-                margin-top: 7px;
-            }
-
-            #face {
-                float: left;
-                padding-right: 10px;
-
-                img {
-                    width: 45px;
-                    height: 45px;
-                }
+            .subheadline {
+                font-size: 0.6rem;
             }
         }
 
-        #main {
+        .header__socials {
+            margin-top: .75rem;
+        }
+
+        .header__logo {
+            float: left;
+            padding-right: 10px;
+        }
+
+        .main__container {
             .column(4);
             .pull(1);
             .push(1);
@@ -102,16 +102,13 @@
     .content {
 
         figure {
-
             max-width: 100%;
             border-top: 1px solid @hrBorder;
             border-bottom: 1px solid @hrBorder;
-            margin-top: @baseLineHeight;
-            margin-bottom: @baseLineHeight !important;
-            padding: @baseLineHeight 0 (@baseLineHeight/2) 0;
+            padding: 1rem 0;
 
             img {
-                margin-bottom: (@baseLineHeight/2);
+                margin-bottom: 1rem;
             }
 
             &.pull-left {
