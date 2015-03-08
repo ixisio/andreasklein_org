@@ -1,5 +1,6 @@
 li.post-list-item(data-href=post.url)
-  a.post-title(href=post.url)
-    = post.title
+  h2
+    a.post-title(href=post.url)
+        = post.title
   div.post-meta
     span.post-date #{post.dateText}

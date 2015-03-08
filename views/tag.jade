@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  h3 posts tagged with:&nbsp;
-    a(href=tagUrl(tag))<b>#{tag}</b>
-  ul
-    each post in posts
-      include includes/postListItem
+    p posts tagged with:&nbsp;
+        a(href=tagUrl(tag))<b>#{tag}</b>
+    ul
+        each post in posts
+            include includes/postListItem

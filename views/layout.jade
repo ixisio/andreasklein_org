@@ -7,7 +7,7 @@ html(lang="en", class="#{typeof post !== 'undefined' ? 'type-article' : 'type-ov
     .container
       include includes/header
 
-      .main__container(role="main")
+      main.main__container(role="main")
         block content
 
       include includes/footer

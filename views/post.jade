@@ -1,25 +1,26 @@
 extends layout
 
 block content
-  div.post
-    h1
-      = post.title
+  article.post#content
+    header
+        h1
+            = post.title
 
-    div.post.content
+    div.post.content#content
       != post.content
 
-    div.comments
-      h2#comments Comments
+    footer.comments#comments
+      h2 Comments
       p Ask me, criticize me, support me, discuss constructively or just share your thoughts on twitter&nbsp;
         a(href="//twitter.com/intent/tweet?original_referer=#{post.url}&text=@ixisio #{post.title}&url=#{post.url}") @ixisio
 
-    div.post-meta
-      span.post-date#date
-        i written on #{post.dateText}
-      if(post.tags.length)
-        span.tags#tags
-          ul
-            - each tag in post.tags
-              li
-                a.label.label-info(href=tagUrl(tag)) #
-                  = tag
+      div.post-meta
+          p.post-date#date
+            em written on #{post.dateText}
+          if(post.tags.length)
+              ul.tags#tags
+                li Tags:
+                - each tag in post.tags
+                  li
+                    a.label.label-info(href=tagUrl(tag)) #
+                      = tag

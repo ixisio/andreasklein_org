@@ -1,6 +1,8 @@
 # Changelog
 
 ## HEAD
+* Update global text line-height
+* Add some semantic flavour to article pages :)
 
 ## v1.3.1 / 2015-03-05
 * Remove CSS IDs and replace with classes
