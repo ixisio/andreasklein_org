@@ -1,6 +1,7 @@
 # Changelog
 
 ## HEAD
+* Use Gravatar for Profile Image
 * Update global text line-height
 * Add some semantic flavour to article pages :)
 
